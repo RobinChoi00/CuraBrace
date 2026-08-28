@@ -1,5 +1,3 @@
-*, *::before, *::after { box-sizing: border-box; }
-
 :root {
     --red: #e31e24;
     --red-deep: #c10000;
@@ -17,27 +15,38 @@
     --body: 'Poppins', sans-serif;
 }
 
-html, body {
+.wrist-page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin: 0;
     padding: 0;
-    width: 100%;
     background: #fff;
     color: var(--charcoal);
     font-family: var(--body);
     overflow-x: hidden;
+    box-sizing: border-box;
+    container-type: inline-size;
+    container-name: wrist;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
-img { display: block; max-width: 100%; height: auto; }
-h2, h3, p { margin: 0; }
-h2, h3 { font-family: var(--font); }
+.wrist-page *,
+.wrist-page *::before,
+.wrist-page *::after { box-sizing: border-box; }
 
-.wrist-page { width: 100%; background: #fff; }
+.wrist-page img { display: block; max-width: 100%; height: auto; }
+.wrist-page h2,
+.wrist-page h3,
+.wrist-page p { margin: 0; }
+.wrist-page h2,
+.wrist-page h3 { font-family: var(--font); }
 
 .wrist-container {
     width: 100%;
     max-width: var(--max);
+    min-width: 0;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -64,14 +73,17 @@ h2, h3 { font-family: var(--font); }
     margin: 0 0 44px;
 }
 
+.wrist-page p.wrist-lead,
 .wrist-lead {
-    text-align: center;
+    display: block;
+    width: 100%;
     max-width: 720px;
     margin: 18px auto 36px;
     font-size: 15px;
     line-height: 1.55;
     color: var(--muted);
     font-weight: 400;
+    text-align: center !important;
 }
 
 /* hero */
@@ -130,18 +142,28 @@ h2, h3 { font-family: var(--font); }
 .wrist-h-dual { color: var(--charcoal); }
 
 .wrist-wave-card {
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 22px 10px 32px;
+    min-width: 0;
+    width: 100%;
 }
-.wrist-wave-col { text-align: center; padding: 0 18px; }
+.wrist-wave-col {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 50%;
+    text-align: center;
+    padding: 0 18px;
+}
 .wrist-wave-col img {
-    width: 58%;
-    max-width: 290px;
-    margin: 8px auto 8px;
+    width: 70%;
+    max-width: 260px;
+    height: auto;
+    margin: 8px auto;
     display: block;
     border: 0;
 }
@@ -150,6 +172,10 @@ h2, h3 { font-family: var(--font); }
     font-size: 18px;
     font-weight: 600;
     margin: 0 0 6px;
+    white-space: normal;
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
 }
 .wrist-wave-col p {
     color: var(--muted);
@@ -157,8 +183,15 @@ h2, h3 { font-family: var(--font); }
     line-height: 1.5;
     max-width: 360px;
     margin: 0 auto;
+    text-align: center !important;
 }
-.wrist-wave-rule { width: 1px; background: #e0e0e0; margin: 8px 0 16px; align-self: stretch; }
+.wrist-wave-rule {
+    flex: 0 0 1px;
+    width: 1px;
+    background: #e0e0e0;
+    margin: 8px 0 16px;
+    align-self: stretch;
+}
 
 /* 3-in-1 */
 .wrist-therapy-shell {
@@ -309,8 +342,8 @@ h2, h3 { font-family: var(--font); }
     background: #000;
     border-radius: var(--radius);
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 0;
     align-items: stretch;
     overflow: hidden;
@@ -319,10 +352,11 @@ h2, h3 { font-family: var(--font); }
     display: flex;
     align-items: center;
     gap: 8px;
+    flex: 0 1 auto;
     min-width: 0;
 }
 .wrist-feat img {
-    height: 210px;
+    height: 252px;
     width: auto;
     max-width: 42%;
     object-fit: cover;
@@ -335,7 +369,7 @@ h2, h3 { font-family: var(--font); }
 }
 .wrist-feat-txt {
     color: #fff;
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
     padding-right: 12px;
 }
@@ -655,11 +689,13 @@ h2, h3 { font-family: var(--font); }
     justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@container wrist (max-width: 1024px) {
     .wrist-section { padding: 72px 0 48px; }
     .wrist-section-tight { padding-top: 36px; }
     .wrist-section-last { padding-bottom: 72px; }
     .wrist-wave-section { padding-top: 80px; }
+
+    .wrist-h-right { text-align: left; }
 
     .wrist-lifestyle,
     .wrist-therapy,
@@ -668,7 +704,11 @@ h2, h3 { font-family: var(--font); }
     .wrist-cover,
     .wrist-included,
     .wrist-spec-grid { grid-template-columns: 1fr; }
-    .wrist-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .wrist-wave-card {
+        flex-direction: column;
+        padding: 20px 16px 24px;
+    }
+    .wrist-wave-col { max-width: 100%; }
     .wrist-wave-rule {
         width: auto;
         height: 1px;
@@ -681,13 +721,19 @@ h2, h3 { font-family: var(--font); }
     .wrist-therapy article { padding: 20px 14px 16px; }
     .wrist-controls { min-height: 0; }
 
-    .wrist-features { padding: 0; gap: 0; }
-    .wrist-feat { gap: 8px; }
+    .wrist-features {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 14px;
+        gap: 8px;
+    }
+    .wrist-feat { gap: 10px; padding: 0; }
     .wrist-feat img,
     .wrist-feat:first-child img {
         width: auto;
         max-width: 38%;
-        height: 140px;
+        height: 168px;
     }
 
     .wrist-cover-main,
@@ -720,7 +766,7 @@ h2, h3 { font-family: var(--font); }
     .wrist-disclaimer { flex: none; }
 }
 
-@media (max-width: 700px) {
+@container wrist (max-width: 700px) {
     .wrist-section { padding: 48px 0 36px; }
     .wrist-section-tight { padding-top: 24px; }
     .wrist-section-last { padding-bottom: 56px; }
@@ -761,7 +807,7 @@ h2, h3 { font-family: var(--font); }
     .wrist-feat:first-child img {
         width: auto;
         max-width: 40%;
-        height: 96px;
+        height: 112px;
     }
 
     .wrist-cover-main img,
@@ -793,7 +839,7 @@ h2, h3 { font-family: var(--font); }
     .wrist-diag-front-row { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 480px) {
+@container wrist (max-width: 480px) {
     .wrist-h-right { text-align: left; }
     .wrist-cover-copy { text-align: left; }
     .wrist-cover-lead { margin-left: 0; }

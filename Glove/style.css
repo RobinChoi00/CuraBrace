@@ -73,16 +73,17 @@
     margin: 0 0 44px;
 }
 
-.glove-page p.glove-lead {
+.glove-page p.glove-lead,
+.glove-lead {
     display: block;
     width: 100%;
     max-width: 720px;
     margin: 18px auto 36px;
-    text-align: center;
     font-size: 15px;
     line-height: 1.55;
     color: var(--muted);
     font-weight: 400;
+    text-align: center !important;
 }
 
 /* hero */
@@ -141,8 +142,9 @@
 .glove-h-dual { color: var(--charcoal); }
 
 .glove-wave-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -151,9 +153,11 @@
     width: 100%;
 }
 .glove-wave-col {
-    text-align: center;
-    padding: 0 28px;
+    flex: 1 1 0;
     min-width: 0;
+    max-width: 50%;
+    text-align: center;
+    padding: 0 18px;
 }
 .glove-wave-col + .glove-wave-col {
     border-left: 1px solid #e0e0e0;
@@ -181,6 +185,7 @@
     line-height: 1.5;
     max-width: 360px;
     margin: 0 auto;
+    text-align: center !important;
 }
 
 /* 3-in-1 */
@@ -293,8 +298,8 @@
     background: #000;
     border-radius: var(--radius);
     padding: 8px 12px 8px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 4px 8px;
     align-items: center;
     overflow: hidden;
@@ -303,6 +308,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    flex: 0 1 auto;
     min-width: 0;
 }
 .glove-feat img {
@@ -320,7 +326,7 @@
 }
 .glove-feat-txt {
     color: #fff;
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
     padding-right: 6px;
 }
@@ -640,11 +646,13 @@
     justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@container glove (max-width: 1024px) {
     .glove-section { padding: 72px 0 48px; }
     .glove-section-tight { padding-top: 36px; }
     .glove-section-last { padding-bottom: 72px; }
     .glove-wave-section { padding-top: 80px; }
+
+    .glove-h-right { text-align: left; }
 
     .glove-lifestyle,
     .glove-therapy,
@@ -653,7 +661,11 @@
     .glove-cover,
     .glove-included,
     .glove-spec-grid { grid-template-columns: 1fr; }
-    .glove-wave-card { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 24px; }
+    .glove-wave-card {
+        flex-direction: column;
+        padding: 20px 16px 24px;
+    }
+    .glove-wave-col { max-width: 100%; }
     .glove-wave-col + .glove-wave-col {
         border-left: 0;
         border-top: 1px solid #e0e0e0;
@@ -664,8 +676,14 @@
 
     .glove-therapy p { min-height: 0; }
 
-    .glove-features { padding: 10px 14px; gap: 6px; }
-    .glove-feat { gap: 10px; }
+    .glove-features {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 14px;
+        gap: 8px;
+    }
+    .glove-feat { gap: 10px; padding: 0; }
     .glove-feat img,
     .glove-feat:first-child img {
         width: 38%;
@@ -702,7 +720,7 @@
     .glove-disclaimer { flex: none; }
 }
 
-@media (max-width: 700px) {
+@container glove (max-width: 700px) {
     .glove-section { padding: 48px 0 36px; }
     .glove-section-tight { padding-top: 24px; }
     .glove-section-last { padding-bottom: 56px; }
@@ -774,7 +792,7 @@
     .glove-diag-front-row { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 480px) {
+@container glove (max-width: 480px) {
     .glove-h-right { text-align: left; }
     .glove-cover-copy { text-align: left; }
     .glove-cover-lead { margin-left: 0; }
