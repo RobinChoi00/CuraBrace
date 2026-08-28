@@ -41,7 +41,7 @@
 .pad-page h3,
 .pad-page p { margin: 0; }
 .pad-page h2,
-.pad-page h3 { font-family: var(--font); }
+.pad-page h3 { font-family: var(--body); }
 
 .pad-container {
     width: 100%;
@@ -53,7 +53,7 @@
 
 .pad-section { padding: 96px 0 96px; }
 .pad-section-tight { padding-top: 56px; }
-.pad-section-last { padding-bottom: 104px; }
+.pad-section-last { padding-bottom: 104px; background: #fff; }
 
 /* headings */
 .pad-h {
@@ -70,7 +70,7 @@
 .pad-h-center:not(.pad-h-dual):not(.pad-h-well),
 .pad-h-right {
     font-size: clamp(26px, 3vw, 40px);
-    margin: 0 0 44px;
+    margin: 0 0 72px;
 }
 
 .pad-page p.pad-lead,
@@ -103,6 +103,7 @@
     font-weight: 600;
     margin: 14px 0 6px;
     letter-spacing: 0.02em;
+    line-height: 1.15;
 }
 .pad-lifestyle p {
     color: var(--muted);
@@ -127,6 +128,9 @@
 
 .pad-tail {
     background: #fef7f1;
+}
+.pad-section:has(.pad-h-included) {
+    background: linear-gradient(to bottom, #fef7f1 0%, #ffffff 90px, #ffffff 100%);
 }
 
 /* dual wavelength */
@@ -205,10 +209,10 @@
 }
 .pad-h-therapy {
     font-size: clamp(22px, 2.4vw, 30px);
-    margin: 0 0 28px;
+    margin: 0 0 48px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     line-height: 1.15;
 }
 .pad-h-therapy span { color: var(--red); }
@@ -327,7 +331,7 @@
 .pad-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 0;
+    padding: 24px 0;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -446,7 +450,7 @@
 }
 .pad-h-well {
     font-size: clamp(20px, 2.3vw, 28px);
-    margin: 0 0 34px;
+    margin: 0 0 56px;
     color: var(--charcoal);
 }
 .pad-h-well span {
@@ -480,7 +484,7 @@
     font-size: 15px;
     font-weight: 600;
     color: var(--charcoal);
-    line-height: 1.25;
+    line-height: 1.1;
     margin-bottom: 8px;
 }
 .pad-benefits p {
@@ -495,6 +499,7 @@
     margin: 0 0 26px;
     color: #707070;
     font-weight: 600;
+    font-family: var(--body);
 }
 .pad-h-included span {
     color: var(--red);
@@ -595,30 +600,33 @@
     font-weight: 600;
     letter-spacing: 0.04em;
     margin: 0 0 12px;
+    color: #fff !important;
+    font-family: var(--body);
 }
 .pad-specs table {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #7a7a7a;
+    border-collapse: collapse !important;
+    border: 1px solid #9a9a9a !important;
 }
 .pad-specs th,
 .pad-specs td {
     padding: 10px 14px;
     text-align: left;
     font-size: 13px;
-    border: 1px solid #6a6a6a;
+    border: 1px solid #9a9a9a !important;
     vertical-align: middle;
+    color: #fff !important;
 }
 .pad-specs th {
     width: 42%;
     font-family: var(--font);
     font-weight: 600;
     letter-spacing: 0.03em;
-    color: #fff;
-    border-right: 1px solid #c0c0c0;
+    color: #fff !important;
+    border-right: 1px solid #c8c8c8 !important;
 }
 .pad-specs td {
-    color: #fff;
+    color: #fff !important;
     font-weight: 400;
 }
 
@@ -647,6 +655,7 @@
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.04em;
+    font-family: var(--body);
 }
 .pad-safety ul {
     margin: 0;
@@ -767,10 +776,10 @@
     .pad-h-dual,
     .pad-h-included {
         font-size: 22px;
-        margin-bottom: 22px;
+        margin-bottom: 32px;
     }
-    .pad-h-therapy { font-size: 20px; margin-bottom: 20px; }
-    .pad-h-well { font-size: 18px; margin-bottom: 22px; }
+    .pad-h-therapy { font-size: 20px; margin-bottom: 32px; }
+    .pad-h-well { font-size: 18px; margin-bottom: 36px; }
     .pad-lead { font-size: 14px; margin: 12px auto 24px; }
 
     .pad-lifestyle { gap: 14px; }

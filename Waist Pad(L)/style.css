@@ -41,7 +41,7 @@
 .wpl-page h3,
 .wpl-page p { margin: 0; }
 .wpl-page h2,
-.wpl-page h3 { font-family: var(--font); }
+.wpl-page h3 { font-family: var(--body); }
 
 .wpl-container {
     width: 100%;
@@ -53,7 +53,7 @@
 
 .wpl-section { padding: 96px 0 96px; }
 .wpl-section-tight { padding-top: 56px; }
-.wpl-section-last { padding-bottom: 104px; }
+.wpl-section-last { padding-bottom: 104px; background: #fff; }
 
 /* headings */
 .wpl-h {
@@ -70,7 +70,7 @@
 .wpl-h-center:not(.wpl-h-dual):not(.wpl-h-well),
 .wpl-h-right {
     font-size: clamp(26px, 3vw, 40px);
-    margin: 0 0 44px;
+    margin: 0 0 72px;
 }
 
 .wpl-page p.wpl-lead,
@@ -103,6 +103,7 @@
     font-weight: 600;
     margin: 14px 0 6px;
     letter-spacing: 0.02em;
+    line-height: 1.15;
 }
 .wpl-lifestyle p {
     color: var(--muted);
@@ -127,6 +128,9 @@
 
 .wpl-tail {
     background: #fef7f1;
+}
+.wpl-section:has(.wpl-h-included) {
+    background: linear-gradient(to bottom, #fef7f1 0%, #ffffff 90px, #ffffff 100%);
 }
 
 /* dual wavelength */
@@ -205,10 +209,10 @@
 }
 .wpl-h-therapy {
     font-size: clamp(22px, 2.4vw, 30px);
-    margin: 0 0 28px;
+    margin: 0 0 48px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     line-height: 1.15;
 }
 .wpl-h-therapy span { color: var(--red); }
@@ -321,7 +325,7 @@
 .wpl-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 0;
+    padding: 24px 0;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -440,7 +444,7 @@
 }
 .wpl-h-well {
     font-size: clamp(20px, 2.3vw, 28px);
-    margin: 0 0 34px;
+    margin: 0 0 56px;
     color: var(--charcoal);
 }
 .wpl-h-well span {
@@ -474,7 +478,7 @@
     font-size: 15px;
     font-weight: 600;
     color: var(--charcoal);
-    line-height: 1.25;
+    line-height: 1.1;
     margin-bottom: 8px;
 }
 .wpl-benefits p {
@@ -489,6 +493,7 @@
     margin: 0 0 26px;
     color: #707070;
     font-weight: 600;
+    font-family: var(--body);
 }
 .wpl-h-included span {
     color: var(--red);
@@ -589,30 +594,33 @@
     font-weight: 600;
     letter-spacing: 0.04em;
     margin: 0 0 12px;
+    color: #fff !important;
+    font-family: var(--body);
 }
 .wpl-specs table {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #7a7a7a;
+    border-collapse: collapse !important;
+    border: 1px solid #9a9a9a !important;
 }
 .wpl-specs th,
 .wpl-specs td {
     padding: 10px 14px;
     text-align: left;
     font-size: 13px;
-    border: 1px solid #6a6a6a;
+    border: 1px solid #9a9a9a !important;
     vertical-align: middle;
+    color: #fff !important;
 }
 .wpl-specs th {
     width: 42%;
     font-family: var(--font);
     font-weight: 600;
     letter-spacing: 0.03em;
-    color: #fff;
-    border-right: 1px solid #c0c0c0;
+    color: #fff !important;
+    border-right: 1px solid #c8c8c8 !important;
 }
 .wpl-specs td {
-    color: #fff;
+    color: #fff !important;
     font-weight: 400;
 }
 
@@ -641,6 +649,7 @@
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.04em;
+    font-family: var(--body);
 }
 .wpl-safety ul {
     margin: 0;
@@ -761,10 +770,10 @@
     .wpl-h-dual,
     .wpl-h-included {
         font-size: 22px;
-        margin-bottom: 22px;
+        margin-bottom: 32px;
     }
-    .wpl-h-therapy { font-size: 20px; margin-bottom: 20px; }
-    .wpl-h-well { font-size: 18px; margin-bottom: 22px; }
+    .wpl-h-therapy { font-size: 20px; margin-bottom: 32px; }
+    .wpl-h-well { font-size: 18px; margin-bottom: 36px; }
     .wpl-lead { font-size: 14px; margin: 12px auto 24px; }
 
     .wpl-lifestyle { gap: 14px; }

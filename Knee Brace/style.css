@@ -41,7 +41,7 @@
 .knee-page h3,
 .knee-page p { margin: 0; }
 .knee-page h2,
-.knee-page h3 { font-family: var(--font); }
+.knee-page h3 { font-family: var(--body); }
 
 .knee-container {
     width: 100%;
@@ -52,7 +52,7 @@
 
 .knee-section { padding: 96px 0 96px; }
 .knee-section-tight { padding-top: 56px; }
-.knee-section-last { padding-bottom: 104px; }
+.knee-section-last { padding-bottom: 104px; background: #fff; }
 
 /* headings */
 .knee-h {
@@ -69,7 +69,7 @@
 .knee-h-center:not(.knee-h-dual):not(.knee-h-well),
 .knee-h-right {
     font-size: clamp(26px, 3vw, 40px);
-    margin: 0 0 44px;
+    margin: 0 0 72px;
 }
 
 .knee-page p.knee-lead,
@@ -102,6 +102,7 @@
     font-weight: 600;
     margin: 14px 0 6px;
     letter-spacing: 0.02em;
+    line-height: 1.15;
 }
 .knee-lifestyle p {
     color: var(--muted);
@@ -126,6 +127,9 @@
 
 .knee-tail {
     background: #fef7f1;
+}
+.knee-section:has(.knee-h-included) {
+    background: linear-gradient(to bottom, #fef7f1 0%, #ffffff 90px, #ffffff 100%);
 }
 
 /* dual wavelength */
@@ -204,10 +208,10 @@
 }
 .knee-h-therapy {
     font-size: clamp(22px, 2.4vw, 30px);
-    margin: 0 0 28px;
+    margin: 0 0 48px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     line-height: 1.15;
 }
 .knee-h-therapy span { color: var(--red); }
@@ -308,7 +312,7 @@
 .knee-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 0 20px 0 0;
+    padding: 24px 20px 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -431,7 +435,7 @@
 }
 .knee-h-well {
     font-size: clamp(20px, 2.3vw, 28px);
-    margin: 0 0 34px;
+    margin: 0 0 56px;
     color: var(--charcoal);
 }
 .knee-h-well span {
@@ -465,7 +469,7 @@
     font-size: 15px;
     font-weight: 600;
     color: var(--charcoal);
-    line-height: 1.25;
+    line-height: 1.1;
     margin-bottom: 8px;
 }
 .knee-benefits p {
@@ -480,6 +484,7 @@
     margin: 0 0 26px;
     color: #707070;
     font-weight: 600;
+    font-family: var(--body);
 }
 .knee-h-included span {
     color: var(--red);
@@ -580,30 +585,33 @@
     font-weight: 600;
     letter-spacing: 0.04em;
     margin: 0 0 12px;
+    color: #fff !important;
+    font-family: var(--body);
 }
 .knee-specs table {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #7a7a7a;
+    border-collapse: collapse !important;
+    border: 1px solid #9a9a9a !important;
 }
 .knee-specs th,
 .knee-specs td {
     padding: 10px 14px;
     text-align: left;
     font-size: 13px;
-    border: 1px solid #6a6a6a;
+    border: 1px solid #9a9a9a !important;
     vertical-align: middle;
+    color: #fff !important;
 }
 .knee-specs th {
     width: 42%;
     font-family: var(--font);
     font-weight: 600;
     letter-spacing: 0.03em;
-    color: #fff;
-    border-right: 1px solid #c0c0c0;
+    color: #fff !important;
+    border-right: 1px solid #c8c8c8 !important;
 }
 .knee-specs td {
-    color: #fff;
+    color: #fff !important;
     font-weight: 400;
 }
 
@@ -632,6 +640,7 @@
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.04em;
+    font-family: var(--body);
 }
 .knee-safety ul {
     margin: 0;
@@ -752,10 +761,10 @@
     .knee-h-dual,
     .knee-h-included {
         font-size: 22px;
-        margin-bottom: 22px;
+        margin-bottom: 32px;
     }
-    .knee-h-therapy { font-size: 20px; margin-bottom: 20px; }
-    .knee-h-well { font-size: 18px; margin-bottom: 22px; }
+    .knee-h-therapy { font-size: 20px; margin-bottom: 32px; }
+    .knee-h-well { font-size: 18px; margin-bottom: 36px; }
     .knee-lead { font-size: 14px; margin: 12px auto 24px; }
 
     .knee-lifestyle { gap: 14px; }
