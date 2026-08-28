@@ -73,10 +73,12 @@
     margin: 0 0 44px;
 }
 
-.glove-lead {
-    text-align: center;
+.glove-page p.glove-lead {
+    display: block;
+    width: 100%;
     max-width: 720px;
     margin: 18px auto 36px;
+    text-align: center;
     font-size: 15px;
     line-height: 1.55;
     color: var(--muted);
@@ -717,7 +719,7 @@
     }
     .glove-h-therapy { font-size: 20px; margin-bottom: 20px; }
     .glove-h-well { font-size: 18px; margin-bottom: 22px; }
-    .glove-lead { font-size: 14px; margin: 12px auto 24px; }
+    .glove-page p.glove-lead { font-size: 14px; margin: 12px auto 24px; }
 
     .glove-lifestyle { gap: 14px; }
     .glove-life-icon { width: 40px; height: 40px; top: -4px; left: -4px; }
