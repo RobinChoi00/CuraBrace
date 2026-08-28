@@ -139,17 +139,24 @@
 
 .knee-wave-card {
     display: grid;
-    grid-template-columns: 1fr 1px 1fr;
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 22px 10px 32px;
+    min-width: 0;
+    width: 100%;
 }
-.knee-wave-col { text-align: center; padding: 0 18px; }
+.knee-wave-col {
+    text-align: center;
+    padding: 0 18px;
+    min-width: 0;
+}
 .knee-wave-col img {
-    width: 58%;
-    max-width: 290px;
-    margin: 8px auto 8px;
+    width: min(58%, 290px);
+    max-width: 100%;
+    height: auto;
+    margin: 8px auto;
     display: block;
     border: 0;
 }
@@ -158,6 +165,9 @@
     font-size: 18px;
     font-weight: 600;
     margin: 0 0 6px;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
 }
 .knee-wave-col p {
     color: var(--muted);
@@ -280,41 +290,42 @@
 .knee-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    align-items: stretch;
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
     overflow: hidden;
 }
 .knee-feat {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    flex: 0 1 auto;
     min-width: 0;
-    padding-right: 16px;
+    padding: 0;
 }
 .knee-feat:first-child {
-    padding-right: 16px;
+    padding: 0;
 }
 .knee-feat img {
     width: auto;
-    height: 240px;
-    max-width: 52%;
+    height: 168px;
+    max-width: none;
     object-fit: contain;
     object-position: center;
     flex-shrink: 0;
     display: block;
 }
 .knee-feat:first-child img {
-    width: 52%;
-    height: 240px;
+    width: 148px;
+    height: 168px;
     object-fit: cover;
     object-position: left center;
 }
 .knee-feat-txt {
     color: #fff;
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
     padding-right: 0;
 }
@@ -649,7 +660,7 @@
     .knee-cover,
     .knee-included,
     .knee-spec-grid { grid-template-columns: 1fr; }
-    .knee-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .knee-wave-card { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 24px; }
     .knee-wave-rule {
         width: auto;
         height: 1px;
@@ -660,13 +671,19 @@
 
     .knee-therapy p { min-height: 0; }
 
-    .knee-features { padding: 0; gap: 0; }
-    .knee-feat { gap: 12px; padding: 8px 14px; }
+    .knee-features {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 14px;
+        gap: 8px;
+    }
+    .knee-feat { gap: 10px; padding: 0; }
     .knee-feat img,
     .knee-feat:first-child img {
         width: auto;
-        height: 140px;
-        max-width: 42%;
+        height: 96px;
+        max-width: 120px;
     }
 
     .knee-cover-main,
@@ -732,19 +749,19 @@
     .knee-pills span { min-width: 70px; }
 
     .knee-features {
-        padding: 0;
+        padding: 8px 12px;
         border-radius: 18px;
-        gap: 0;
+        gap: 8px;
     }
-    .knee-feat { gap: 10px; padding: 8px 12px; }
+    .knee-feat { gap: 10px; padding: 0; }
     .knee-feat-txt { padding-right: 0; }
     .knee-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .knee-feat-txt p { font-size: 12px; }
     .knee-feat img,
     .knee-feat:first-child img {
         width: auto;
-        height: 96px;
-        max-width: 40%;
+        height: 80px;
+        max-width: 96px;
     }
 
     .knee-cover-main img,
