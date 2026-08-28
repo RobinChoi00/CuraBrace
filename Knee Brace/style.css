@@ -229,13 +229,17 @@
     align-items: center;
     justify-content: flex-end;
 }
-.knee-t-icon {
-    height: 70px;
-    width: auto;
-    margin-bottom: 16px;
+.knee-page .knee-t-icon {
+    height: 72px !important;
+    width: 72px !important;
+    max-width: 72px;
+    max-height: 72px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 16px;
+    flex-shrink: 0;
+    display: block;
 }
-.knee-t-icon.massage { height: 60px; }
-.knee-t-icon.light { height: 76px; }
 .knee-therapy h3 {
     font-size: 16px;
     font-weight: 600;
@@ -322,21 +326,19 @@
 .knee-feat:first-child {
     padding: 0;
 }
-.knee-feat img {
-    width: auto;
-    height: 168px;
-    max-width: none;
-    object-fit: contain;
+.knee-page .knee-feat img,
+.knee-page .knee-feat:first-child img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
     display: block;
 }
-.knee-feat:first-child img {
-    width: 148px;
-    height: 168px;
-    object-fit: cover;
-    object-position: left center;
-}
+
+
 .knee-feat-txt {
     color: #fff;
     flex: 0 1 auto;
@@ -349,6 +351,7 @@
     letter-spacing: 0.02em;
     line-height: 1.25;
     margin: 0 0 8px;
+    color: #fff !important;
 }
 .knee-feat-txt p {
     font-size: 13px;
@@ -697,11 +700,13 @@
         gap: 8px;
     }
     .knee-feat { gap: 10px; padding: 0; }
-    .knee-feat img,
-    .knee-feat:first-child img {
-        width: auto;
-        height: 96px;
-        max-width: 120px;
+    .knee-page .knee-feat img,
+    .knee-page .knee-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .knee-cover-main,
@@ -775,11 +780,13 @@
     .knee-feat-txt { padding-right: 0; }
     .knee-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .knee-feat-txt p { font-size: 12px; }
-    .knee-feat img,
-    .knee-feat:first-child img {
-        width: auto;
-        height: 80px;
-        max-width: 96px;
+    .knee-page .knee-feat img,
+    .knee-page .knee-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .knee-cover-main img,

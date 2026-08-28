@@ -230,13 +230,17 @@
     align-items: center;
     justify-content: flex-end;
 }
-.shoulder-t-icon {
-    height: 70px;
-    width: auto;
-    margin-bottom: 16px;
+.shoulder-page .shoulder-t-icon {
+    height: 72px !important;
+    width: 72px !important;
+    max-width: 72px;
+    max-height: 72px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 16px;
+    flex-shrink: 0;
+    display: block;
 }
-.shoulder-t-icon.massage { height: 60px; }
-.shoulder-t-icon.light { height: 76px; }
 .shoulder-therapy h3 {
     font-size: 16px;
     font-weight: 600;
@@ -319,18 +323,19 @@
     flex: 0 1 auto;
     min-width: 0;
 }
-.shoulder-feat img {
-    height: 210px;
-    width: auto;
-    max-width: 40%;
-    object-fit: cover;
-    object-position: left center;
+.shoulder-page .shoulder-feat img,
+.shoulder-page .shoulder-feat:first-child img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain !important;
+    object-position: center;
     flex-shrink: 0;
     display: block;
 }
-.shoulder-feat:first-child img {
-    object-position: left center;
-}
+
+
 .shoulder-feat-txt {
     color: #fff;
     flex: 0 1 auto;
@@ -343,6 +348,7 @@
     letter-spacing: 0.02em;
     line-height: 1.25;
     margin: 0 0 8px;
+    color: #fff !important;
 }
 .shoulder-feat-txt p {
     font-size: 13px;
@@ -691,11 +697,13 @@
         gap: 8px;
     }
     .shoulder-feat { gap: 10px; padding: 0; }
-    .shoulder-feat img,
-    .shoulder-feat:first-child img {
-        width: auto;
-        max-width: 38%;
-        height: 140px;
+    .shoulder-page .shoulder-feat img,
+    .shoulder-page .shoulder-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .shoulder-cover-main,
@@ -769,11 +777,13 @@
     .shoulder-feat-txt { padding-right: 10px; }
     .shoulder-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .shoulder-feat-txt p { font-size: 12px; }
-    .shoulder-feat img,
-    .shoulder-feat:first-child img {
-        width: auto;
-        max-width: 40%;
-        height: 96px;
+    .shoulder-page .shoulder-feat img,
+    .shoulder-page .shoulder-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .shoulder-cover-main img,

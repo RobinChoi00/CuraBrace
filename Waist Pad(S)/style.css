@@ -229,14 +229,17 @@
     flex-direction: column;
     align-items: center;
 }
-.pad-t-icon {
-    height: 70px;
-    width: auto;
-    margin-bottom: 16px;
+.pad-page .pad-t-icon {
+    height: 72px !important;
+    width: 72px !important;
+    max-width: 72px;
+    max-height: 72px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 16px;
+    flex-shrink: 0;
+    display: block;
 }
-.pad-t-icon.pulse { height: 62px; }
-.pad-t-icon.timer { height: 62px; }
-.pad-t-icon.light { height: 76px; }
 .pad-therapy h3 {
     font-size: 16px;
     font-weight: 600;
@@ -331,18 +334,19 @@
     flex: 0 1 auto;
     min-width: 0;
 }
-.pad-feat img {
-    height: 320px;
-    width: 40%;
-    object-fit: contain;
+.pad-page .pad-feat img,
+.pad-page .pad-feat:first-child img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
     display: block;
 }
-.pad-feat:first-child img {
-    object-fit: cover;
-    object-position: left center;
-}
+
+
 .pad-feat-txt {
     color: #fff;
     flex: 0 1 auto;
@@ -356,6 +360,7 @@
     letter-spacing: 0.02em;
     line-height: 1.25;
     margin: 0 0 8px;
+    color: #fff !important;
 }
 .pad-feat-txt p {
     font-size: 13px;
@@ -734,10 +739,13 @@
         gap: 8px;
     }
     .pad-feat { gap: 10px; padding: 0; }
-    .pad-feat img,
-    .pad-feat:first-child img {
-        width: 38%;
-        height: 220px;
+    .pad-page .pad-feat img,
+    .pad-page .pad-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .pad-cover-main,
@@ -812,10 +820,13 @@
     .pad-feat-txt { padding-right: 0; }
     .pad-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .pad-feat-txt p { font-size: 12px; }
-    .pad-feat img,
-    .pad-feat:first-child img {
-        width: 42%;
-        height: 160px;
+    .pad-page .pad-feat img,
+    .pad-page .pad-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .pad-cover-main img,

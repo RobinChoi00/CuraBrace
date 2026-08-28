@@ -229,14 +229,17 @@
     flex-direction: column;
     align-items: center;
 }
-.wpl-t-icon {
-    height: 70px;
-    width: auto;
-    margin-bottom: 16px;
+.wpl-page .wpl-t-icon {
+    height: 72px !important;
+    width: 72px !important;
+    max-width: 72px;
+    max-height: 72px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 16px;
+    flex-shrink: 0;
+    display: block;
 }
-.wpl-t-icon.pulse { height: 64px; }
-.wpl-t-icon.timer { height: 68px; }
-.wpl-t-icon.light { height: 76px; }
 .wpl-therapy h3 {
     font-size: 16px;
     font-weight: 600;
@@ -332,18 +335,19 @@
     flex: 0 1 auto;
     min-width: 0;
 }
-.wpl-feat img {
-    height: 210px;
-    width: auto;
-    max-width: 40%;
-    object-fit: cover;
-    object-position: left center;
+.wpl-page .wpl-feat img,
+.wpl-page .wpl-feat:first-child img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain !important;
+    object-position: center;
     flex-shrink: 0;
     display: block;
 }
-.wpl-feat:first-child img {
-    object-position: left center;
-}
+
+
 .wpl-feat-txt {
     color: #fff;
     flex: 0 1 auto;
@@ -356,6 +360,7 @@
     letter-spacing: 0.02em;
     line-height: 1.25;
     margin: 0 0 8px;
+    color: #fff !important;
 }
 .wpl-feat-txt p {
     font-size: 13px;
@@ -704,11 +709,13 @@
         gap: 8px;
     }
     .wpl-feat { gap: 10px; padding: 0; }
-    .wpl-feat img,
-    .wpl-feat:first-child img {
-        width: auto;
-        max-width: 38%;
-        height: 140px;
+    .wpl-page .wpl-feat img,
+    .wpl-page .wpl-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .wpl-cover-main,
@@ -778,11 +785,13 @@
     .wpl-feat-txt { padding-right: 10px; }
     .wpl-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .wpl-feat-txt p { font-size: 12px; }
-    .wpl-feat img,
-    .wpl-feat:first-child img {
-        width: auto;
-        max-width: 40%;
-        height: 96px;
+    .wpl-page .wpl-feat img,
+    .wpl-page .wpl-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .wpl-cover-main img,

@@ -230,13 +230,27 @@
     flex-direction: column;
     align-items: center;
 }
-.pad-t-icon {
+.pad-t-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
     height: 72px;
-    width: 88px;
-    object-fit: contain;
-    object-position: center;
-    margin: 0 0 12px;
     flex-shrink: 0;
+    margin: 0 0 14px;
+}
+.pad-page .pad-t-icon,
+.pad-page .pad-t-icon.massage,
+.pad-page .pad-t-icon.light {
+    height: 64px !important;
+    width: auto !important;
+    max-width: 96px !important;
+    max-height: 64px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+    display: block;
 }
 .pad-therapy h3 {
     font-size: 16px;
@@ -327,18 +341,19 @@
     flex: 0 1 auto;
     min-width: 0;
 }
-.pad-feat img {
-    height: 210px;
-    width: auto;
-    max-width: 40%;
-    object-fit: cover;
-    object-position: left center;
+.pad-page .pad-feat img,
+.pad-page .pad-feat:first-child img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain !important;
+    object-position: center;
     flex-shrink: 0;
     display: block;
 }
-.pad-feat:first-child img {
-    object-position: left center;
-}
+
+
 .pad-feat-txt {
     color: #fff;
     flex: 0 1 auto;
@@ -351,6 +366,7 @@
     letter-spacing: 0.02em;
     line-height: 1.25;
     margin: 0 0 8px;
+    color: #fff !important;
 }
 .pad-feat-txt p {
     font-size: 13px;
@@ -699,11 +715,13 @@
         gap: 8px;
     }
     .pad-feat { gap: 10px; padding: 0; }
-    .pad-feat img,
-    .pad-feat:first-child img {
-        width: auto;
-        max-width: 38%;
-        height: 140px;
+    .pad-page .pad-feat img,
+    .pad-page .pad-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .pad-cover-main,
@@ -773,11 +791,13 @@
     .pad-feat-txt { padding-right: 10px; }
     .pad-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .pad-feat-txt p { font-size: 12px; }
-    .pad-feat img,
-    .pad-feat:first-child img {
-        width: auto;
-        max-width: 40%;
-        height: 96px;
+    .pad-page .pad-feat img,
+    .pad-page .pad-feat:first-child img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px;
+        max-height: 72px;
+        object-fit: contain !important;
     }
 
     .pad-cover-main img,
