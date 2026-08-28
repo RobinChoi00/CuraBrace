@@ -1,0 +1,758 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --red: #e31e24;
+    --red-deep: #c10000;
+    --navy: #1a1a5e;
+    --charcoal: #4a4a4a;
+    --muted: #6b6b6b;
+    --line: #e6e6e6;
+    --pink: #fff0ef;
+    --peach: #ffdada;
+    --radius: 24px;
+    --radius-sm: 16px;
+    --max: 1180px;
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    --font: 'Montserrat', sans-serif;
+    --body: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    color: var(--charcoal);
+    font-family: var(--body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h2, h3, p { margin: 0; }
+h2, h3 { font-family: var(--font); }
+
+.ankle-page { width: 100%; background: #fff; }
+
+.ankle-container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.ankle-section { padding: 96px 0 96px; }
+.ankle-section-tight { padding-top: 56px; }
+.ankle-section-last { padding-bottom: 104px; }
+
+/* headings */
+.ankle-h {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    color: var(--charcoal);
+}
+.ankle-h-center { text-align: center; }
+.ankle-h-left { text-align: left; }
+.ankle-h-right { text-align: right; }
+.ankle-h span { color: var(--red); }
+
+.ankle-h-center:not(.ankle-h-dual):not(.ankle-h-well),
+.ankle-h-right {
+    font-size: clamp(26px, 3vw, 40px);
+    margin: 0 0 44px;
+}
+
+.ankle-lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 18px auto 36px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* hero */
+.ankle-hero { width: 100%; overflow: hidden; }
+.ankle-hero img { width: 100%; }
+
+/* lifestyle */
+.ankle-lifestyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.ankle-lifestyle article { padding-top: 10px; }
+.ankle-lifestyle h3 {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+}
+.ankle-lifestyle p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.ankle-life-media { position: relative; }
+.ankle-life-media img:not(.ankle-life-icon) {
+    width: 100%;
+    aspect-ratio: 792 / 693;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.ankle-life-icon {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+}
+
+.ankle-tail {
+    background: #fef7f1;
+}
+
+/* dual wavelength */
+.ankle-wave-section {
+    background: transparent;
+    padding-top: 128px;
+}
+.ankle-h-dual {
+    font-size: clamp(26px, 3vw, 38px);
+    margin: 0;
+}
+.ankle-h-dual span { color: var(--red); }
+.ankle-h-dual { color: var(--charcoal); }
+
+.ankle-wave-card {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 10px 32px;
+}
+.ankle-wave-col { text-align: center; padding: 0 18px; }
+.ankle-wave-col img {
+    width: 58%;
+    max-width: 290px;
+    margin: 8px auto 8px;
+    display: block;
+    border: 0;
+}
+.ankle-wave-col h3 {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.ankle-wave-col p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.ankle-wave-rule { width: 1px; background: #e0e0e0; margin: 8px 0 16px; align-self: stretch; }
+
+/* 3-in-1 */
+.ankle-therapy-shell {
+    background:
+        radial-gradient(ellipse 100% 150% at 100% -12%, rgba(255, 70, 55, 0.82) 0%, rgba(255, 130, 105, 0.55) 24%, rgba(255, 185, 165, 0.28) 46%, transparent 68%),
+        radial-gradient(ellipse 80% 100% at 96% 112%, rgba(255, 95, 75, 0.58) 0%, rgba(255, 170, 150, 0.22) 40%, transparent 60%),
+        #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 42px 28px 36px;
+}
+.ankle-h-therapy {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.15;
+}
+.ankle-h-therapy span { color: var(--red); }
+.ankle-h-therapy { color: var(--charcoal); }
+
+.ankle-therapy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.ankle-therapy article {
+    background: #fff;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 36px 20px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ankle-t-icon {
+    height: 70px;
+    width: auto;
+    margin-bottom: 16px;
+}
+.ankle-t-icon.timer { height: 60px; }
+.ankle-t-icon.light { height: 76px; }
+.ankle-therapy h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ankle-therapy h3.red { color: var(--red); }
+.ankle-therapy h3.navy { color: var(--navy); }
+.ankle-therapy p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+    min-height: 68px;
+}
+
+.ankle-pills {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 16px;
+    flex-wrap: wrap;
+}
+.ankle-pills span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    padding: 8px 10px 6px;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: 10px;
+}
+.ankle-pills span b {
+    font-size: 14px;
+    font-weight: 800;
+}
+.ankle-pills.heat .low { background: #fde8d8; color: #ef6c00; }
+.ankle-pills.heat .mid { background: #fddde0; color: var(--red); }
+.ankle-pills.heat .high { background: #f7c5c8; color: #b50d16; }
+.ankle-pills.timer span {
+    background: #eceef3;
+    color: var(--navy);
+    min-width: 64px;
+}
+.ankle-pills.timer span b { font-size: 18px; }
+.ankle-pills.light {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.ankle-pills.light .row { display: flex; gap: 6px; }
+.ankle-pills.light span {
+    background: #fdeced;
+    color: var(--red);
+    min-width: 52px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+
+/* features banner */
+.ankle-features {
+    background: #000;
+    border-radius: var(--radius);
+    padding: 8px 12px 8px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 8px;
+    align-items: center;
+    overflow: hidden;
+}
+.ankle-feat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+}
+.ankle-feat img {
+    width: 56%;
+    height: 252px;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    display: block;
+}
+.ankle-feat:first-child img {
+    object-fit: cover;
+    object-position: left center;
+    height: 268px;
+}
+.ankle-feat-txt {
+    color: #fff;
+    flex: 1;
+    min-width: 0;
+    padding-right: 6px;
+}
+.ankle-feat-txt h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+.ankle-feat-txt p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* coverage */
+.ankle-cover {
+    display: grid;
+    grid-template-columns: 1.72fr 0.86fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.ankle-cover-main,
+.ankle-cover-bag {
+    margin: 0;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+}
+.ankle-cover-main img,
+.ankle-cover-bag img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ankle-cover-main img {
+    object-position: left center;
+}
+.ankle-cover-bag img {
+    object-position: center;
+}
+.ankle-cover-copy {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    bottom: 28px;
+    left: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+.ankle-cover-lead {
+    margin: 0 0 0 auto;
+    max-width: 280px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #5a5a5a;
+    background: none;
+}
+.ankle-cover-title {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.2;
+}
+.ankle-cover-title span { color: var(--red); white-space: nowrap; }
+
+/* wellness */
+.ankle-wellness {
+    background:
+        radial-gradient(ellipse 140% 155% at 100% 0%, rgba(255, 192, 172, 0.62) 0%, rgba(255, 210, 192, 0.38) 36%, rgba(255, 228, 216, 0.16) 58%, transparent 78%),
+        #ffffff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 48px 24px 40px;
+}
+.ankle-h-well {
+    font-size: clamp(20px, 2.3vw, 28px);
+    margin: 0 0 34px;
+    color: var(--charcoal);
+}
+.ankle-h-well span {
+    color: var(--red);
+}
+.ankle-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.ankle-benefits article {
+    text-align: center;
+    padding: 14px 18px 12px;
+    position: relative;
+}
+.ankle-benefits article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18%;
+    bottom: 18%;
+    width: 1px;
+    background: #e0e0e0;
+}
+.ankle-benefits img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 16px;
+}
+.ankle-benefits h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+.ankle-benefits p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+/* what's included */
+.ankle-h-included {
+    font-size: clamp(26px, 3vw, 36px);
+    margin: 0 0 26px;
+    color: #707070;
+    font-weight: 600;
+}
+.ankle-h-included span {
+    color: var(--red);
+    font-weight: 600;
+}
+.ankle-included {
+    display: grid;
+    grid-template-columns: 0.82fr 1.28fr;
+    gap: 20px;
+    align-items: center;
+}
+.ankle-included-product img { width: 100%; }
+
+.ankle-diagram {
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    padding: 18px 16px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+.ankle-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.callout {
+    font-size: 12px;
+    line-height: 1.3;
+}
+.callout strong {
+    display: block;
+    color: var(--red);
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+.callout span {
+    display: block;
+    color: #707070;
+    font-size: 11px;
+    margin-top: 2px;
+}
+.ankle-diag-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.ankle-diag-side img {
+    width: 100%;
+    max-width: 220px;
+    margin: 4px 0;
+}
+.ankle-diag-front {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.ankle-diag-front-row {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.ankle-diag-front img {
+    width: 100%;
+    max-width: 150px;
+    background: #111;
+    border-radius: 18px;
+    padding: 8px;
+}
+
+/* specs */
+.ankle-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+.ankle-specs,
+.ankle-safety {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-width: 0;
+}
+.ankle-specs {
+    background: #000;
+    color: #fff;
+    padding: 28px 24px 20px;
+}
+.ankle-specs h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 0 12px;
+}
+.ankle-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #7a7a7a;
+}
+.ankle-specs th,
+.ankle-specs td {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+    border: 1px solid #6a6a6a;
+    vertical-align: middle;
+}
+.ankle-specs th {
+    width: 42%;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    border-right: 1px solid #c0c0c0;
+}
+.ankle-specs td {
+    color: #fff;
+    font-weight: 400;
+}
+
+.ankle-safety {
+    background: #c00000;
+    color: #fff;
+    padding: 28px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+}
+.ankle-safety-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+.ankle-safety-head img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.ankle-safety h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.ankle-safety ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+}
+.ankle-safety li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+.ankle-safety li::marker { color: #fff; }
+.ankle-disclaimer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.28);
+    flex: 0.72;
+    display: flex;
+    flex-direction: column;
+}
+.ankle-disclaimer ul {
+    flex: 1;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .ankle-section { padding: 72px 0 48px; }
+    .ankle-section-tight { padding-top: 36px; }
+    .ankle-section-last { padding-bottom: 72px; }
+    .ankle-wave-section { padding-top: 80px; }
+
+    .ankle-lifestyle,
+    .ankle-therapy,
+    .ankle-benefits { grid-template-columns: repeat(2, 1fr); }
+    .ankle-features,
+    .ankle-cover,
+    .ankle-included,
+    .ankle-spec-grid { grid-template-columns: 1fr; }
+    .ankle-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .ankle-wave-rule {
+        width: auto;
+        height: 1px;
+        margin: 20px 24px;
+        align-self: auto;
+    }
+    .ankle-wave-col img { width: 70%; max-width: 260px; }
+
+    .ankle-therapy p { min-height: 0; }
+
+    .ankle-features { padding: 10px 14px; gap: 6px; }
+    .ankle-feat { gap: 10px; }
+    .ankle-feat img,
+    .ankle-feat:first-child img {
+        width: 38%;
+        height: 140px;
+    }
+
+    .ankle-cover-main,
+    .ankle-cover-bag { min-height: 0; }
+    .ankle-cover-main img,
+    .ankle-cover-bag img {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    .ankle-cover-copy {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        padding: 18px 20px 22px;
+        text-align: right;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+    .ankle-cover-lead { max-width: none; }
+    .ankle-cover-title span { white-space: normal; }
+
+    .ankle-benefits article:nth-child(2)::after { display: none; }
+    .ankle-safety { justify-content: flex-start; }
+    .ankle-safety ul,
+    .ankle-disclaimer { flex: none; }
+}
+
+@media (max-width: 700px) {
+    .ankle-section { padding: 48px 0 36px; }
+    .ankle-section-tight { padding-top: 24px; }
+    .ankle-section-last { padding-bottom: 56px; }
+    .ankle-container { padding: 0 16px; }
+    .ankle-wave-section { padding-top: 56px; }
+
+    .ankle-h-right,
+    .ankle-h-left,
+    .ankle-h-center:not(.ankle-h-dual):not(.ankle-h-well),
+    .ankle-h-dual,
+    .ankle-h-included {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+    .ankle-h-therapy { font-size: 20px; margin-bottom: 20px; }
+    .ankle-h-well { font-size: 18px; margin-bottom: 22px; }
+    .ankle-lead { font-size: 14px; margin: 12px auto 24px; }
+
+    .ankle-lifestyle { gap: 14px; }
+    .ankle-life-icon { width: 40px; height: 40px; top: -4px; left: -4px; }
+    .ankle-lifestyle h3 { font-size: 12px; }
+
+    .ankle-therapy { grid-template-columns: 1fr; }
+    .ankle-therapy-shell { padding: 22px 14px 18px; }
+    .ankle-therapy article { padding: 24px 16px 20px; }
+    .ankle-pills span { min-width: 70px; }
+
+    .ankle-features {
+        padding: 8px 12px;
+        border-radius: 18px;
+        gap: 4px;
+    }
+    .ankle-feat { gap: 10px; }
+    .ankle-feat-txt { padding-right: 0; }
+    .ankle-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
+    .ankle-feat-txt p { font-size: 12px; }
+    .ankle-feat img,
+    .ankle-feat:first-child img {
+        width: 42%;
+        height: 96px;
+    }
+
+    .ankle-cover-main img,
+    .ankle-cover-bag img { height: 220px; }
+    .ankle-cover-copy { padding: 16px 16px 18px; }
+    .ankle-cover-lead { font-size: 14px; }
+    .ankle-cover-title { font-size: 20px; }
+
+    .ankle-wellness { padding: 28px 14px 22px; }
+    .ankle-benefits { gap: 8px 0; }
+    .ankle-benefits article { padding: 12px 10px; }
+    .ankle-benefits article::after { display: none; }
+    .ankle-benefits img { width: 56px; height: 56px; margin-bottom: 10px; }
+    .ankle-benefits h3 { font-size: 13px; }
+    .ankle-benefits p { font-size: 12px; }
+
+    .ankle-specs,
+    .ankle-safety { padding: 20px 16px 16px; border-radius: 16px; }
+    .ankle-specs h3,
+    .ankle-safety h3 { font-size: 16px; }
+    .ankle-specs th,
+    .ankle-specs td {
+        padding: 8px 10px;
+        font-size: 12px;
+        word-break: break-word;
+    }
+    .ankle-safety li { font-size: 13px; line-height: 1.45; }
+
+    .ankle-diag-front-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .ankle-h-right { text-align: left; }
+    .ankle-cover-copy { text-align: left; }
+    .ankle-cover-lead { margin-left: 0; }
+}

@@ -1,0 +1,766 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --red: #e31e24;
+    --red-deep: #c10000;
+    --navy: #1a1a5e;
+    --charcoal: #4a4a4a;
+    --muted: #6b6b6b;
+    --line: #e6e6e6;
+    --pink: #fff0ef;
+    --peach: #ffdada;
+    --radius: 24px;
+    --radius-sm: 16px;
+    --max: 1180px;
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    --font: 'Montserrat', sans-serif;
+    --body: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    color: var(--charcoal);
+    font-family: var(--body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h2, h3, p { margin: 0; }
+h2, h3 { font-family: var(--font); }
+
+.shoulder-page { width: 100%; background: #fff; }
+
+.shoulder-container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.shoulder-section { padding: 96px 0 96px; }
+.shoulder-section-tight { padding-top: 56px; }
+.shoulder-section-last { padding-bottom: 104px; }
+
+/* headings */
+.shoulder-h {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    color: var(--charcoal);
+}
+.shoulder-h-center { text-align: center; }
+.shoulder-h-left { text-align: left; }
+.shoulder-h-right { text-align: right; }
+.shoulder-h span { color: var(--red); }
+
+.shoulder-h-center:not(.shoulder-h-dual):not(.shoulder-h-well),
+.shoulder-h-right {
+    font-size: clamp(26px, 3vw, 40px);
+    margin: 0 0 44px;
+}
+
+.shoulder-lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 18px auto 36px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* hero */
+.shoulder-hero { width: 100%; overflow: hidden; }
+.shoulder-hero img { width: 100%; }
+
+/* lifestyle */
+.shoulder-lifestyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.shoulder-lifestyle article { padding-top: 10px; }
+.shoulder-lifestyle h3 {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+}
+.shoulder-lifestyle p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.shoulder-life-media { position: relative; }
+.shoulder-life-media img:not(.shoulder-life-icon) {
+    width: 100%;
+    aspect-ratio: 792 / 693;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.shoulder-life-icon {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+}
+
+.shoulder-tail {
+    background: #fef7f1;
+}
+
+/* dual wavelength */
+.shoulder-wave-section {
+    background: transparent;
+    padding-top: 128px;
+}
+.shoulder-h-dual {
+    font-size: clamp(26px, 3vw, 38px);
+    margin: 0;
+}
+.shoulder-h-dual span { color: var(--red); }
+.shoulder-h-dual { color: var(--charcoal); }
+
+.shoulder-wave-card {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 10px 32px;
+}
+.shoulder-wave-col { text-align: center; padding: 0 18px; }
+.shoulder-wave-col img {
+    width: 58%;
+    max-width: 290px;
+    margin: 8px auto 8px;
+    display: block;
+    border: 0;
+}
+.shoulder-wave-col h3 {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.shoulder-wave-col p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.shoulder-wave-rule { width: 1px; background: #e0e0e0; margin: 8px 0 16px; align-self: stretch; }
+
+/* 3-in-1 */
+.shoulder-therapy-shell {
+    background:
+        radial-gradient(ellipse 100% 150% at 100% -12%, rgba(255, 70, 55, 0.82) 0%, rgba(255, 130, 105, 0.55) 24%, rgba(255, 185, 165, 0.28) 46%, transparent 68%),
+        radial-gradient(ellipse 80% 100% at 96% 112%, rgba(255, 95, 75, 0.58) 0%, rgba(255, 170, 150, 0.22) 40%, transparent 60%),
+        #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 42px 28px 36px;
+}
+.shoulder-h-therapy {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.15;
+}
+.shoulder-h-therapy span { color: var(--red); }
+.shoulder-h-therapy { color: var(--charcoal); }
+
+.shoulder-therapy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.shoulder-therapy article {
+    background: #fff;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 40px 20px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.shoulder-t-icon {
+    height: 70px;
+    width: auto;
+    margin-bottom: 16px;
+}
+.shoulder-t-icon.massage { height: 60px; }
+.shoulder-t-icon.light { height: 76px; }
+.shoulder-therapy h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.shoulder-therapy h3.red { color: var(--red); }
+.shoulder-therapy h3.navy { color: var(--navy); }
+.shoulder-therapy p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+    min-height: 68px;
+}
+
+.shoulder-pills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    margin-top: 28px;
+    min-height: 90px;
+    flex-wrap: wrap;
+}
+.shoulder-pills span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    padding: 8px 10px 6px;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: 10px;
+}
+.shoulder-pills span b {
+    font-size: 14px;
+    font-weight: 800;
+}
+.shoulder-pills.heat .low { background: #fde8d8; color: #ef6c00; }
+.shoulder-pills.heat .mid { background: #fddde0; color: var(--red); }
+.shoulder-pills.heat .high { background: #f7c5c8; color: #b50d16; }
+.shoulder-pills.massage span {
+    background: #eceef3;
+    color: var(--navy);
+    min-width: 64px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+.shoulder-pills.light {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.shoulder-pills.light .row { display: flex; gap: 6px; }
+.shoulder-pills.light span {
+    background: #fdeced;
+    color: var(--red);
+    min-width: 52px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+
+/* features banner */
+.shoulder-features {
+    background: #000;
+    border-radius: var(--radius);
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    align-items: stretch;
+    overflow: hidden;
+}
+.shoulder-feat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+.shoulder-feat img {
+    height: 210px;
+    width: auto;
+    max-width: 40%;
+    object-fit: cover;
+    object-position: left center;
+    flex-shrink: 0;
+    display: block;
+}
+.shoulder-feat:first-child img {
+    object-position: left center;
+}
+.shoulder-feat-txt {
+    color: #fff;
+    flex: 1;
+    min-width: 0;
+    padding-right: 12px;
+}
+.shoulder-feat-txt h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+.shoulder-feat-txt p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* coverage */
+.shoulder-cover {
+    display: grid;
+    grid-template-columns: 0.86fr 1.72fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.shoulder-cover-main,
+.shoulder-cover-bag {
+    margin: 0;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+}
+.shoulder-cover-main img,
+.shoulder-cover-bag img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shoulder-cover-main img {
+    object-position: right center;
+}
+.shoulder-cover-bag img {
+    object-position: center;
+}
+.shoulder-cover-copy {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    bottom: 28px;
+    right: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+.shoulder-cover-lead {
+    margin: 0;
+    max-width: 300px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #5a5a5a;
+    background: none;
+}
+.shoulder-cover-title {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.2;
+}
+.shoulder-cover-title span { color: var(--red); white-space: nowrap; }
+
+/* wellness */
+.shoulder-wellness {
+    background:
+        radial-gradient(ellipse 140% 155% at 100% 0%, rgba(255, 192, 172, 0.62) 0%, rgba(255, 210, 192, 0.38) 36%, rgba(255, 228, 216, 0.16) 58%, transparent 78%),
+        #ffffff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 48px 24px 40px;
+}
+.shoulder-h-well {
+    font-size: clamp(20px, 2.3vw, 28px);
+    margin: 0 0 34px;
+    color: var(--charcoal);
+}
+.shoulder-h-well span {
+    color: var(--red);
+}
+.shoulder-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.shoulder-benefits article {
+    text-align: center;
+    padding: 14px 18px 12px;
+    position: relative;
+}
+.shoulder-benefits article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18%;
+    bottom: 18%;
+    width: 1px;
+    background: #e0e0e0;
+}
+.shoulder-benefits img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 16px;
+}
+.shoulder-benefits h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+.shoulder-benefits p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+/* what's included */
+.shoulder-h-included {
+    font-size: clamp(26px, 3vw, 36px);
+    margin: 0 0 26px;
+    color: #707070;
+    font-weight: 600;
+}
+.shoulder-h-included span {
+    color: var(--red);
+    font-weight: 600;
+}
+.shoulder-included {
+    display: grid;
+    grid-template-columns: 0.82fr 1.28fr;
+    gap: 20px;
+    align-items: center;
+}
+.shoulder-included-product img { width: 100%; }
+
+.shoulder-diagram {
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    padding: 18px 16px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+.shoulder-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.callout {
+    font-size: 12px;
+    line-height: 1.3;
+}
+.callout strong {
+    display: block;
+    color: var(--red);
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+.callout span {
+    display: block;
+    color: #707070;
+    font-size: 11px;
+    margin-top: 2px;
+}
+.shoulder-diag-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.shoulder-diag-side img {
+    width: 100%;
+    max-width: 220px;
+    margin: 4px 0;
+}
+.shoulder-diag-front {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.shoulder-diag-front-row {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.shoulder-diag-front img {
+    width: 100%;
+    max-width: 150px;
+    background: #111;
+    border-radius: 18px;
+    padding: 8px;
+}
+
+/* specs */
+.shoulder-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+.shoulder-specs,
+.shoulder-safety {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-width: 0;
+}
+.shoulder-specs {
+    background: #000;
+    color: #fff;
+    padding: 28px 24px 20px;
+}
+.shoulder-specs h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 0 12px;
+}
+.shoulder-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #7a7a7a;
+}
+.shoulder-specs th,
+.shoulder-specs td {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+    border: 1px solid #6a6a6a;
+    vertical-align: middle;
+}
+.shoulder-specs th {
+    width: 42%;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    border-right: 1px solid #c0c0c0;
+}
+.shoulder-specs td {
+    color: #fff;
+    font-weight: 400;
+}
+
+.shoulder-safety {
+    background: #c00000;
+    color: #fff;
+    padding: 28px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+}
+.shoulder-safety-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+.shoulder-safety-head img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.shoulder-safety h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.shoulder-safety ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+}
+.shoulder-safety li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+.shoulder-safety li::marker { color: #fff; }
+.shoulder-disclaimer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.28);
+    flex: 0.72;
+    display: flex;
+    flex-direction: column;
+}
+.shoulder-disclaimer ul {
+    flex: 1;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .shoulder-section { padding: 72px 0 48px; }
+    .shoulder-section-tight { padding-top: 36px; }
+    .shoulder-section-last { padding-bottom: 72px; }
+    .shoulder-wave-section { padding-top: 80px; }
+
+    .shoulder-lifestyle,
+    .shoulder-therapy,
+    .shoulder-benefits { grid-template-columns: repeat(2, 1fr); }
+    .shoulder-features,
+    .shoulder-cover,
+    .shoulder-included,
+    .shoulder-spec-grid { grid-template-columns: 1fr; }
+    .shoulder-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .shoulder-wave-rule {
+        width: auto;
+        height: 1px;
+        margin: 20px 24px;
+        align-self: auto;
+    }
+    .shoulder-wave-col img { width: 70%; max-width: 260px; }
+
+    .shoulder-therapy p { min-height: 0; }
+
+    .shoulder-features { padding: 0; gap: 0; }
+    .shoulder-feat { gap: 8px; }
+    .shoulder-feat img,
+    .shoulder-feat:first-child img {
+        width: auto;
+        max-width: 38%;
+        height: 140px;
+    }
+
+    .shoulder-cover-main,
+    .shoulder-cover-bag { min-height: 0; }
+    .shoulder-cover-main img,
+    .shoulder-cover-bag img {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    .shoulder-cover-copy {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        padding: 18px 20px 22px;
+        text-align: left;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+    .shoulder-cover-lead { max-width: none; }
+    .shoulder-cover-title span { white-space: normal; }
+
+    .shoulder-benefits article:nth-child(2)::after { display: none; }
+    .shoulder-safety { justify-content: flex-start; }
+    .shoulder-safety ul,
+    .shoulder-disclaimer { flex: none; }
+}
+
+@media (max-width: 700px) {
+    .shoulder-section { padding: 48px 0 36px; }
+    .shoulder-section-tight { padding-top: 24px; }
+    .shoulder-section-last { padding-bottom: 56px; }
+    .shoulder-container { padding: 0 16px; }
+    .shoulder-wave-section { padding-top: 56px; }
+
+    .shoulder-h-right,
+    .shoulder-h-left,
+    .shoulder-h-center:not(.shoulder-h-dual):not(.shoulder-h-well),
+    .shoulder-h-dual,
+    .shoulder-h-included {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+    .shoulder-h-therapy { font-size: 20px; margin-bottom: 20px; }
+    .shoulder-h-well { font-size: 18px; margin-bottom: 22px; }
+    .shoulder-lead { font-size: 14px; margin: 12px auto 24px; }
+
+    .shoulder-lifestyle { gap: 14px; }
+    .shoulder-life-icon { width: 40px; height: 40px; top: -4px; left: -4px; }
+    .shoulder-lifestyle h3 { font-size: 12px; }
+
+    .shoulder-therapy { grid-template-columns: 1fr; }
+    .shoulder-therapy-shell { padding: 22px 14px 18px; }
+    .shoulder-therapy article { padding: 24px 16px 20px; }
+    .shoulder-pills {
+        margin-top: 16px;
+        min-height: 0;
+    }
+    .shoulder-pills span { min-width: 70px; }
+
+    .shoulder-features {
+        padding: 0;
+        border-radius: 18px;
+        gap: 0;
+    }
+    .shoulder-feat { gap: 8px; }
+    .shoulder-feat-txt { padding-right: 10px; }
+    .shoulder-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
+    .shoulder-feat-txt p { font-size: 12px; }
+    .shoulder-feat img,
+    .shoulder-feat:first-child img {
+        width: auto;
+        max-width: 40%;
+        height: 96px;
+    }
+
+    .shoulder-cover-main img,
+    .shoulder-cover-bag img { height: 220px; }
+    .shoulder-cover-copy { padding: 16px 16px 18px; }
+    .shoulder-cover-lead { font-size: 14px; }
+    .shoulder-cover-title { font-size: 20px; }
+
+    .shoulder-wellness { padding: 28px 14px 22px; }
+    .shoulder-benefits { gap: 8px 0; }
+    .shoulder-benefits article { padding: 12px 10px; }
+    .shoulder-benefits article::after { display: none; }
+    .shoulder-benefits img { width: 56px; height: 56px; margin-bottom: 10px; }
+    .shoulder-benefits h3 { font-size: 13px; }
+    .shoulder-benefits p { font-size: 12px; }
+
+    .shoulder-specs,
+    .shoulder-safety { padding: 20px 16px 16px; border-radius: 16px; }
+    .shoulder-specs h3,
+    .shoulder-safety h3 { font-size: 16px; }
+    .shoulder-specs th,
+    .shoulder-specs td {
+        padding: 8px 10px;
+        font-size: 12px;
+        word-break: break-word;
+    }
+    .shoulder-safety li { font-size: 13px; line-height: 1.45; }
+
+    .shoulder-diag-front-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .shoulder-h-right { text-align: left; }
+    .shoulder-cover-copy { text-align: left; }
+    .shoulder-cover-lead { margin-left: 0; }
+}

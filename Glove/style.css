@@ -1,0 +1,758 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --red: #e31e24;
+    --red-deep: #c10000;
+    --navy: #1a1a5e;
+    --charcoal: #4a4a4a;
+    --muted: #6b6b6b;
+    --line: #e6e6e6;
+    --pink: #fff0ef;
+    --peach: #ffdada;
+    --radius: 24px;
+    --radius-sm: 16px;
+    --max: 1180px;
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    --font: 'Montserrat', sans-serif;
+    --body: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    color: var(--charcoal);
+    font-family: var(--body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h2, h3, p { margin: 0; }
+h2, h3 { font-family: var(--font); }
+
+.glove-page { width: 100%; background: #fff; }
+
+.glove-container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.glove-section { padding: 96px 0 96px; }
+.glove-section-tight { padding-top: 56px; }
+.glove-section-last { padding-bottom: 104px; }
+
+/* headings */
+.glove-h {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    color: var(--charcoal);
+}
+.glove-h-center { text-align: center; }
+.glove-h-left { text-align: left; }
+.glove-h-right { text-align: right; }
+.glove-h span { color: var(--red); }
+
+.glove-h-center:not(.glove-h-dual):not(.glove-h-well),
+.glove-h-right {
+    font-size: clamp(26px, 3vw, 40px);
+    margin: 0 0 44px;
+}
+
+.glove-lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 18px auto 36px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* hero */
+.glove-hero { width: 100%; overflow: hidden; }
+.glove-hero img { width: 100%; }
+
+/* lifestyle */
+.glove-lifestyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.glove-lifestyle article { padding-top: 10px; }
+.glove-lifestyle h3 {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+}
+.glove-lifestyle p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.glove-life-media { position: relative; }
+.glove-life-media img:not(.glove-life-icon) {
+    width: 100%;
+    aspect-ratio: 792 / 693;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.glove-life-icon {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+}
+
+.glove-tail {
+    background: #fef7f1;
+}
+
+/* dual wavelength */
+.glove-wave-section {
+    background: transparent;
+    padding-top: 128px;
+}
+.glove-h-dual {
+    font-size: clamp(26px, 3vw, 38px);
+    margin: 0;
+}
+.glove-h-dual span { color: var(--red); }
+.glove-h-dual { color: var(--charcoal); }
+
+.glove-wave-card {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 10px 32px;
+}
+.glove-wave-col { text-align: center; padding: 0 18px; }
+.glove-wave-col img {
+    width: 58%;
+    max-width: 290px;
+    margin: 8px auto 8px;
+    display: block;
+    border: 0;
+}
+.glove-wave-col h3 {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.glove-wave-col p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.glove-wave-rule { width: 1px; background: #e0e0e0; margin: 8px 0 16px; align-self: stretch; }
+
+/* 3-in-1 */
+.glove-therapy-shell {
+    background:
+        radial-gradient(ellipse 100% 150% at 100% -12%, rgba(255, 70, 55, 0.82) 0%, rgba(255, 130, 105, 0.55) 24%, rgba(255, 185, 165, 0.28) 46%, transparent 68%),
+        radial-gradient(ellipse 80% 100% at 96% 112%, rgba(255, 95, 75, 0.58) 0%, rgba(255, 170, 150, 0.22) 40%, transparent 60%),
+        #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 42px 28px 36px;
+}
+.glove-h-therapy {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.15;
+}
+.glove-h-therapy span { color: var(--red); }
+.glove-h-therapy { color: var(--charcoal); }
+
+.glove-therapy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.glove-therapy article {
+    background: #fff;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 36px 20px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.glove-t-icon {
+    height: 70px;
+    width: auto;
+    margin-bottom: 16px;
+}
+.glove-t-icon.timer { height: 60px; }
+.glove-t-icon.light { height: 76px; }
+.glove-therapy h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.glove-therapy h3.red { color: var(--red); }
+.glove-therapy h3.navy { color: var(--navy); }
+.glove-therapy p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+    min-height: 68px;
+}
+
+.glove-pills {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 16px;
+    flex-wrap: wrap;
+}
+.glove-pills span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    padding: 8px 10px 6px;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: 10px;
+}
+.glove-pills span b {
+    font-size: 14px;
+    font-weight: 800;
+}
+.glove-pills.heat .low { background: #fde8d8; color: #ef6c00; }
+.glove-pills.heat .mid { background: #fddde0; color: var(--red); }
+.glove-pills.heat .high { background: #f7c5c8; color: #b50d16; }
+.glove-pills.timer span {
+    background: #eceef3;
+    color: var(--navy);
+    min-width: 64px;
+}
+.glove-pills.timer span b { font-size: 18px; }
+.glove-pills.light {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.glove-pills.light .row { display: flex; gap: 6px; }
+.glove-pills.light span {
+    background: #fdeced;
+    color: var(--red);
+    min-width: 52px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+
+/* features banner */
+.glove-features {
+    background: #000;
+    border-radius: var(--radius);
+    padding: 8px 12px 8px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 8px;
+    align-items: center;
+    overflow: hidden;
+}
+.glove-feat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+}
+.glove-feat img {
+    width: 56%;
+    height: 252px;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    display: block;
+}
+.glove-feat:first-child img {
+    object-fit: cover;
+    object-position: left center;
+    height: 268px;
+}
+.glove-feat-txt {
+    color: #fff;
+    flex: 1;
+    min-width: 0;
+    padding-right: 6px;
+}
+.glove-feat-txt h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+.glove-feat-txt p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* coverage */
+.glove-cover {
+    display: grid;
+    grid-template-columns: 0.86fr 1.72fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.glove-cover-main,
+.glove-cover-bag {
+    margin: 0;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+}
+.glove-cover-main img,
+.glove-cover-bag img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.glove-cover-main img {
+    object-position: right center;
+}
+.glove-cover-bag img {
+    object-position: center;
+}
+.glove-cover-copy {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    bottom: 28px;
+    right: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+.glove-cover-lead {
+    margin: 0;
+    max-width: 280px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #5a5a5a;
+    background: none;
+}
+.glove-cover-title {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.2;
+}
+.glove-cover-title span { color: var(--red); white-space: nowrap; }
+
+/* wellness */
+.glove-wellness {
+    background:
+        radial-gradient(ellipse 140% 155% at 100% 0%, rgba(255, 192, 172, 0.62) 0%, rgba(255, 210, 192, 0.38) 36%, rgba(255, 228, 216, 0.16) 58%, transparent 78%),
+        #ffffff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 48px 24px 40px;
+}
+.glove-h-well {
+    font-size: clamp(20px, 2.3vw, 28px);
+    margin: 0 0 34px;
+    color: var(--charcoal);
+}
+.glove-h-well span {
+    color: var(--red);
+}
+.glove-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.glove-benefits article {
+    text-align: center;
+    padding: 14px 18px 12px;
+    position: relative;
+}
+.glove-benefits article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18%;
+    bottom: 18%;
+    width: 1px;
+    background: #e0e0e0;
+}
+.glove-benefits img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 16px;
+}
+.glove-benefits h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+.glove-benefits p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+/* what's included */
+.glove-h-included {
+    font-size: clamp(26px, 3vw, 36px);
+    margin: 0 0 26px;
+    color: #707070;
+    font-weight: 600;
+}
+.glove-h-included span {
+    color: var(--red);
+    font-weight: 600;
+}
+.glove-included {
+    display: grid;
+    grid-template-columns: 0.82fr 1.28fr;
+    gap: 20px;
+    align-items: center;
+}
+.glove-included-product img { width: 100%; }
+
+.glove-diagram {
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    padding: 18px 16px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+.glove-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.callout {
+    font-size: 12px;
+    line-height: 1.3;
+}
+.callout strong {
+    display: block;
+    color: var(--red);
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+.callout span {
+    display: block;
+    color: #707070;
+    font-size: 11px;
+    margin-top: 2px;
+}
+.glove-diag-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.glove-diag-side img {
+    width: 100%;
+    max-width: 220px;
+    margin: 4px 0;
+}
+.glove-diag-front {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.glove-diag-front-row {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.glove-diag-front img {
+    width: 100%;
+    max-width: 150px;
+    background: #111;
+    border-radius: 18px;
+    padding: 8px;
+}
+
+/* specs */
+.glove-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+.glove-specs,
+.glove-safety {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-width: 0;
+}
+.glove-specs {
+    background: #000;
+    color: #fff;
+    padding: 28px 24px 20px;
+}
+.glove-specs h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 0 12px;
+}
+.glove-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #7a7a7a;
+}
+.glove-specs th,
+.glove-specs td {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+    border: 1px solid #6a6a6a;
+    vertical-align: middle;
+}
+.glove-specs th {
+    width: 42%;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    border-right: 1px solid #c0c0c0;
+}
+.glove-specs td {
+    color: #fff;
+    font-weight: 400;
+}
+
+.glove-safety {
+    background: #c00000;
+    color: #fff;
+    padding: 28px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+}
+.glove-safety-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+.glove-safety-head img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.glove-safety h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.glove-safety ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+}
+.glove-safety li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+.glove-safety li::marker { color: #fff; }
+.glove-disclaimer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.28);
+    flex: 0.72;
+    display: flex;
+    flex-direction: column;
+}
+.glove-disclaimer ul {
+    flex: 1;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .glove-section { padding: 72px 0 48px; }
+    .glove-section-tight { padding-top: 36px; }
+    .glove-section-last { padding-bottom: 72px; }
+    .glove-wave-section { padding-top: 80px; }
+
+    .glove-lifestyle,
+    .glove-therapy,
+    .glove-benefits { grid-template-columns: repeat(2, 1fr); }
+    .glove-features,
+    .glove-cover,
+    .glove-included,
+    .glove-spec-grid { grid-template-columns: 1fr; }
+    .glove-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .glove-wave-rule {
+        width: auto;
+        height: 1px;
+        margin: 20px 24px;
+        align-self: auto;
+    }
+    .glove-wave-col img { width: 70%; max-width: 260px; }
+
+    .glove-therapy p { min-height: 0; }
+
+    .glove-features { padding: 10px 14px; gap: 6px; }
+    .glove-feat { gap: 10px; }
+    .glove-feat img,
+    .glove-feat:first-child img {
+        width: 38%;
+        height: 140px;
+    }
+
+    .glove-cover-main,
+    .glove-cover-bag { min-height: 0; }
+    .glove-cover-main img,
+    .glove-cover-bag img {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    .glove-cover-copy {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        padding: 18px 20px 22px;
+        text-align: left;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+    .glove-cover-lead { max-width: none; }
+    .glove-cover-title span { white-space: normal; }
+
+    .glove-benefits article:nth-child(2)::after { display: none; }
+    .glove-safety { justify-content: flex-start; }
+    .glove-safety ul,
+    .glove-disclaimer { flex: none; }
+}
+
+@media (max-width: 700px) {
+    .glove-section { padding: 48px 0 36px; }
+    .glove-section-tight { padding-top: 24px; }
+    .glove-section-last { padding-bottom: 56px; }
+    .glove-container { padding: 0 16px; }
+    .glove-wave-section { padding-top: 56px; }
+
+    .glove-h-right,
+    .glove-h-left,
+    .glove-h-center:not(.glove-h-dual):not(.glove-h-well),
+    .glove-h-dual,
+    .glove-h-included {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+    .glove-h-therapy { font-size: 20px; margin-bottom: 20px; }
+    .glove-h-well { font-size: 18px; margin-bottom: 22px; }
+    .glove-lead { font-size: 14px; margin: 12px auto 24px; }
+
+    .glove-lifestyle { gap: 14px; }
+    .glove-life-icon { width: 40px; height: 40px; top: -4px; left: -4px; }
+    .glove-lifestyle h3 { font-size: 12px; }
+
+    .glove-therapy { grid-template-columns: 1fr; }
+    .glove-therapy-shell { padding: 22px 14px 18px; }
+    .glove-therapy article { padding: 24px 16px 20px; }
+    .glove-pills span { min-width: 70px; }
+
+    .glove-features {
+        padding: 8px 12px;
+        border-radius: 18px;
+        gap: 4px;
+    }
+    .glove-feat { gap: 10px; }
+    .glove-feat-txt { padding-right: 0; }
+    .glove-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
+    .glove-feat-txt p { font-size: 12px; }
+    .glove-feat img,
+    .glove-feat:first-child img {
+        width: 42%;
+        height: 96px;
+    }
+
+    .glove-cover-main img,
+    .glove-cover-bag img { height: 220px; }
+    .glove-cover-copy { padding: 16px 16px 18px; }
+    .glove-cover-lead { font-size: 14px; }
+    .glove-cover-title { font-size: 20px; }
+
+    .glove-wellness { padding: 28px 14px 22px; }
+    .glove-benefits { gap: 8px 0; }
+    .glove-benefits article { padding: 12px 10px; }
+    .glove-benefits article::after { display: none; }
+    .glove-benefits img { width: 56px; height: 56px; margin-bottom: 10px; }
+    .glove-benefits h3 { font-size: 13px; }
+    .glove-benefits p { font-size: 12px; }
+
+    .glove-specs,
+    .glove-safety { padding: 20px 16px 16px; border-radius: 16px; }
+    .glove-specs h3,
+    .glove-safety h3 { font-size: 16px; }
+    .glove-specs th,
+    .glove-specs td {
+        padding: 8px 10px;
+        font-size: 12px;
+        word-break: break-word;
+    }
+    .glove-safety li { font-size: 13px; line-height: 1.45; }
+
+    .glove-diag-front-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .glove-h-right { text-align: left; }
+    .glove-cover-copy { text-align: left; }
+    .glove-cover-lead { margin-left: 0; }
+}

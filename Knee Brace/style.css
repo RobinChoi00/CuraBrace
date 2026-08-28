@@ -1,0 +1,773 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --red: #e31e24;
+    --red-deep: #c10000;
+    --navy: #1a1a5e;
+    --charcoal: #4a4a4a;
+    --muted: #6b6b6b;
+    --line: #e6e6e6;
+    --pink: #fff0ef;
+    --peach: #ffdada;
+    --radius: 24px;
+    --radius-sm: 16px;
+    --max: 1180px;
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    --font: 'Montserrat', sans-serif;
+    --body: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    color: var(--charcoal);
+    font-family: var(--body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h2, h3, p { margin: 0; }
+h2, h3 { font-family: var(--font); }
+
+.knee-page { width: 100%; background: #fff; }
+
+.knee-container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.knee-section { padding: 96px 0 96px; }
+.knee-section-tight { padding-top: 56px; }
+.knee-section-last { padding-bottom: 104px; }
+
+/* headings */
+.knee-h {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    color: var(--charcoal);
+}
+.knee-h-center { text-align: center; }
+.knee-h-left { text-align: left; }
+.knee-h-right { text-align: right; }
+.knee-h span { color: var(--red); }
+
+.knee-h-center:not(.knee-h-dual):not(.knee-h-well),
+.knee-h-right {
+    font-size: clamp(26px, 3vw, 40px);
+    margin: 0 0 44px;
+}
+
+.knee-lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 18px auto 36px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* hero */
+.knee-hero { width: 100%; overflow: hidden; }
+.knee-hero img { width: 100%; }
+
+/* lifestyle */
+.knee-lifestyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.knee-lifestyle article { padding-top: 10px; }
+.knee-lifestyle h3 {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+}
+.knee-lifestyle p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.knee-life-media { position: relative; }
+.knee-life-media img:not(.knee-life-icon) {
+    width: 100%;
+    aspect-ratio: 792 / 693;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.knee-life-icon {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+}
+
+.knee-tail {
+    background: #fef7f1;
+}
+
+/* dual wavelength */
+.knee-wave-section {
+    background: transparent;
+    padding-top: 128px;
+}
+.knee-h-dual {
+    font-size: clamp(26px, 3vw, 38px);
+    margin: 0;
+}
+.knee-h-dual span { color: var(--red); }
+.knee-h-dual { color: var(--charcoal); }
+
+.knee-wave-card {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 10px 32px;
+}
+.knee-wave-col { text-align: center; padding: 0 18px; }
+.knee-wave-col img {
+    width: 58%;
+    max-width: 290px;
+    margin: 8px auto 8px;
+    display: block;
+    border: 0;
+}
+.knee-wave-col h3 {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.knee-wave-col p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.knee-wave-rule { width: 1px; background: #e0e0e0; margin: 8px 0 16px; align-self: stretch; }
+
+/* 3-in-1 */
+.knee-therapy-shell {
+    background:
+        radial-gradient(ellipse 100% 150% at 100% -12%, rgba(255, 70, 55, 0.82) 0%, rgba(255, 130, 105, 0.55) 24%, rgba(255, 185, 165, 0.28) 46%, transparent 68%),
+        radial-gradient(ellipse 80% 100% at 96% 112%, rgba(255, 95, 75, 0.58) 0%, rgba(255, 170, 150, 0.22) 40%, transparent 60%),
+        #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 42px 28px 36px;
+}
+.knee-h-therapy {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.15;
+}
+.knee-h-therapy span { color: var(--red); }
+.knee-h-therapy { color: var(--charcoal); }
+
+.knee-therapy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.knee-therapy article {
+    background: #fff;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 40px 20px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.knee-t-icon {
+    height: 70px;
+    width: auto;
+    margin-bottom: 16px;
+}
+.knee-t-icon.massage { height: 60px; }
+.knee-t-icon.light { height: 76px; }
+.knee-therapy h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.knee-therapy h3.red { color: var(--red); }
+.knee-therapy h3.navy { color: var(--navy); }
+.knee-therapy p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+    min-height: 68px;
+}
+
+.knee-pills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    margin-top: 28px;
+    min-height: 90px;
+    flex-wrap: wrap;
+}
+.knee-pills span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    padding: 8px 10px 6px;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: 10px;
+}
+.knee-pills span b {
+    font-size: 14px;
+    font-weight: 800;
+}
+.knee-pills.heat .low { background: #fde8d8; color: #ef6c00; }
+.knee-pills.heat .mid { background: #fddde0; color: var(--red); }
+.knee-pills.heat .high { background: #f7c5c8; color: #b50d16; }
+.knee-pills.massage span {
+    background: #eceef3;
+    color: var(--navy);
+    min-width: 64px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+.knee-pills.light {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.knee-pills.light .row { display: flex; gap: 6px; }
+.knee-pills.light span {
+    background: #fdeced;
+    color: var(--red);
+    min-width: 52px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+
+/* features banner */
+.knee-features {
+    background: #000;
+    border-radius: var(--radius);
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    align-items: stretch;
+    overflow: hidden;
+}
+.knee-feat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding-right: 16px;
+}
+.knee-feat:first-child {
+    padding-right: 16px;
+}
+.knee-feat img {
+    width: auto;
+    height: 240px;
+    max-width: 52%;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    display: block;
+}
+.knee-feat:first-child img {
+    width: 52%;
+    height: 240px;
+    object-fit: cover;
+    object-position: left center;
+}
+.knee-feat-txt {
+    color: #fff;
+    flex: 1;
+    min-width: 0;
+    padding-right: 0;
+}
+.knee-feat-txt h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+.knee-feat-txt p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* coverage */
+.knee-cover {
+    display: grid;
+    grid-template-columns: 0.86fr 1.72fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.knee-cover-main,
+.knee-cover-bag {
+    margin: 0;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+}
+.knee-cover-main img,
+.knee-cover-bag img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.knee-cover-main img {
+    object-position: left center;
+}
+.knee-cover-bag img {
+    object-position: center;
+}
+.knee-cover-copy {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    bottom: 28px;
+    left: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+.knee-cover-lead {
+    margin: 0 0 0 auto;
+    max-width: 280px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #5a5a5a;
+    background: none;
+}
+.knee-cover-title {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.2;
+}
+.knee-cover-title span { color: var(--red); white-space: nowrap; }
+
+/* wellness */
+.knee-wellness {
+    background:
+        radial-gradient(ellipse 140% 155% at 100% 0%, rgba(255, 192, 172, 0.62) 0%, rgba(255, 210, 192, 0.38) 36%, rgba(255, 228, 216, 0.16) 58%, transparent 78%),
+        #ffffff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 48px 24px 40px;
+}
+.knee-h-well {
+    font-size: clamp(20px, 2.3vw, 28px);
+    margin: 0 0 34px;
+    color: var(--charcoal);
+}
+.knee-h-well span {
+    color: var(--red);
+}
+.knee-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.knee-benefits article {
+    text-align: center;
+    padding: 14px 18px 12px;
+    position: relative;
+}
+.knee-benefits article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18%;
+    bottom: 18%;
+    width: 1px;
+    background: #e0e0e0;
+}
+.knee-benefits img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 16px;
+}
+.knee-benefits h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+.knee-benefits p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+/* what's included */
+.knee-h-included {
+    font-size: clamp(26px, 3vw, 36px);
+    margin: 0 0 26px;
+    color: #707070;
+    font-weight: 600;
+}
+.knee-h-included span {
+    color: var(--red);
+    font-weight: 600;
+}
+.knee-included {
+    display: grid;
+    grid-template-columns: 0.82fr 1.28fr;
+    gap: 20px;
+    align-items: center;
+}
+.knee-included-product img { width: 100%; }
+
+.knee-diagram {
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    padding: 18px 16px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+.knee-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.callout {
+    font-size: 12px;
+    line-height: 1.3;
+}
+.callout strong {
+    display: block;
+    color: var(--red);
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+.callout span {
+    display: block;
+    color: #707070;
+    font-size: 11px;
+    margin-top: 2px;
+}
+.knee-diag-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.knee-diag-side img {
+    width: 100%;
+    max-width: 220px;
+    margin: 4px 0;
+}
+.knee-diag-front {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.knee-diag-front-row {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.knee-diag-front img {
+    width: 100%;
+    max-width: 150px;
+    background: #111;
+    border-radius: 18px;
+    padding: 8px;
+}
+
+/* specs */
+.knee-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+.knee-specs,
+.knee-safety {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-width: 0;
+}
+.knee-specs {
+    background: #000;
+    color: #fff;
+    padding: 28px 24px 20px;
+}
+.knee-specs h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 0 12px;
+}
+.knee-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #7a7a7a;
+}
+.knee-specs th,
+.knee-specs td {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+    border: 1px solid #6a6a6a;
+    vertical-align: middle;
+}
+.knee-specs th {
+    width: 42%;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    border-right: 1px solid #c0c0c0;
+}
+.knee-specs td {
+    color: #fff;
+    font-weight: 400;
+}
+
+.knee-safety {
+    background: #c00000;
+    color: #fff;
+    padding: 28px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+}
+.knee-safety-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+.knee-safety-head img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.knee-safety h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.knee-safety ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+}
+.knee-safety li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+.knee-safety li::marker { color: #fff; }
+.knee-disclaimer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.28);
+    flex: 0.72;
+    display: flex;
+    flex-direction: column;
+}
+.knee-disclaimer ul {
+    flex: 1;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .knee-section { padding: 72px 0 48px; }
+    .knee-section-tight { padding-top: 36px; }
+    .knee-section-last { padding-bottom: 72px; }
+    .knee-wave-section { padding-top: 80px; }
+
+    .knee-lifestyle,
+    .knee-therapy,
+    .knee-benefits { grid-template-columns: repeat(2, 1fr); }
+    .knee-features,
+    .knee-cover,
+    .knee-included,
+    .knee-spec-grid { grid-template-columns: 1fr; }
+    .knee-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .knee-wave-rule {
+        width: auto;
+        height: 1px;
+        margin: 20px 24px;
+        align-self: auto;
+    }
+    .knee-wave-col img { width: 70%; max-width: 260px; }
+
+    .knee-therapy p { min-height: 0; }
+
+    .knee-features { padding: 0; gap: 0; }
+    .knee-feat { gap: 12px; padding: 8px 14px; }
+    .knee-feat img,
+    .knee-feat:first-child img {
+        width: auto;
+        height: 140px;
+        max-width: 42%;
+    }
+
+    .knee-cover-main,
+    .knee-cover-bag { min-height: 0; }
+    .knee-cover-main img,
+    .knee-cover-bag img {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    .knee-cover-copy {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        padding: 18px 20px 22px;
+        text-align: right;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+    .knee-cover-lead { max-width: none; }
+    .knee-cover-title span { white-space: normal; }
+
+    .knee-benefits article:nth-child(2)::after { display: none; }
+    .knee-safety { justify-content: flex-start; }
+    .knee-safety ul,
+    .knee-disclaimer { flex: none; }
+}
+
+@media (max-width: 700px) {
+    .knee-section { padding: 48px 0 36px; }
+    .knee-section-tight { padding-top: 24px; }
+    .knee-section-last { padding-bottom: 56px; }
+    .knee-container { padding: 0 16px; }
+    .knee-wave-section { padding-top: 56px; }
+
+    .knee-h-right,
+    .knee-h-left,
+    .knee-h-center:not(.knee-h-dual):not(.knee-h-well),
+    .knee-h-dual,
+    .knee-h-included {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+    .knee-h-therapy { font-size: 20px; margin-bottom: 20px; }
+    .knee-h-well { font-size: 18px; margin-bottom: 22px; }
+    .knee-lead { font-size: 14px; margin: 12px auto 24px; }
+
+    .knee-lifestyle { gap: 14px; }
+    .knee-life-icon { width: 40px; height: 40px; top: -4px; left: -4px; }
+    .knee-lifestyle h3 { font-size: 12px; }
+
+    .knee-therapy { grid-template-columns: 1fr; }
+    .knee-therapy-shell { padding: 22px 14px 18px; }
+    .knee-therapy article { padding: 24px 16px 20px; }
+    .knee-pills {
+        margin-top: 16px;
+        min-height: 0;
+    }
+    .knee-pills span { min-width: 70px; }
+
+    .knee-features {
+        padding: 0;
+        border-radius: 18px;
+        gap: 0;
+    }
+    .knee-feat { gap: 10px; padding: 8px 12px; }
+    .knee-feat-txt { padding-right: 0; }
+    .knee-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
+    .knee-feat-txt p { font-size: 12px; }
+    .knee-feat img,
+    .knee-feat:first-child img {
+        width: auto;
+        height: 96px;
+        max-width: 40%;
+    }
+
+    .knee-cover-main img,
+    .knee-cover-bag img { height: 220px; }
+    .knee-cover-copy { padding: 16px 16px 18px; }
+    .knee-cover-lead { font-size: 14px; }
+    .knee-cover-title { font-size: 20px; }
+
+    .knee-wellness { padding: 28px 14px 22px; }
+    .knee-benefits { gap: 8px 0; }
+    .knee-benefits article { padding: 12px 10px; }
+    .knee-benefits article::after { display: none; }
+    .knee-benefits img { width: 56px; height: 56px; margin-bottom: 10px; }
+    .knee-benefits h3 { font-size: 13px; }
+    .knee-benefits p { font-size: 12px; }
+
+    .knee-specs,
+    .knee-safety { padding: 20px 16px 16px; border-radius: 16px; }
+    .knee-specs h3,
+    .knee-safety h3 { font-size: 16px; }
+    .knee-specs th,
+    .knee-specs td {
+        padding: 8px 10px;
+        font-size: 12px;
+        word-break: break-word;
+    }
+    .knee-safety li { font-size: 13px; line-height: 1.45; }
+
+    .knee-diag-front-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .knee-h-right { text-align: left; }
+    .knee-cover-copy { text-align: left; }
+    .knee-cover-lead { margin-left: 0; }
+}

@@ -1,0 +1,761 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --red: #e31e24;
+    --red-deep: #c10000;
+    --navy: #1a1a5e;
+    --charcoal: #4a4a4a;
+    --muted: #6b6b6b;
+    --line: #e6e6e6;
+    --pink: #fff0ef;
+    --peach: #ffdada;
+    --radius: 24px;
+    --radius-sm: 16px;
+    --max: 1180px;
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    --font: 'Montserrat', sans-serif;
+    --body: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    color: var(--charcoal);
+    font-family: var(--body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h2, h3, p { margin: 0; }
+h2, h3 { font-family: var(--font); }
+
+.ns-page { width: 100%; background: #fff; }
+
+.ns-container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.ns-section { padding: 96px 0 96px; }
+.ns-section-tight { padding-top: 56px; }
+.ns-section-last { padding-bottom: 104px; }
+
+/* headings */
+.ns-h {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    color: var(--charcoal);
+}
+.ns-h-center { text-align: center; }
+.ns-h-left { text-align: left; }
+.ns-h-right { text-align: right; }
+.ns-h span { color: var(--red); }
+
+.ns-h-center:not(.ns-h-dual):not(.ns-h-well),
+.ns-h-right {
+    font-size: clamp(26px, 3vw, 40px);
+    margin: 0 0 44px;
+}
+
+.ns-lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 18px auto 36px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* hero */
+.ns-hero { width: 100%; overflow: hidden; }
+.ns-hero img { width: 100%; }
+
+/* lifestyle */
+.ns-lifestyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.ns-lifestyle article { padding-top: 10px; }
+.ns-lifestyle h3 {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+}
+.ns-lifestyle p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.ns-life-media { position: relative; }
+.ns-life-media img:not(.ns-life-icon) {
+    width: 100%;
+    aspect-ratio: 792 / 693;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.ns-life-icon {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+}
+
+.ns-tail {
+    background: #fef7f1;
+}
+
+/* dual wavelength */
+.ns-wave-section {
+    background: transparent;
+    padding-top: 128px;
+}
+.ns-h-dual {
+    font-size: clamp(26px, 3vw, 38px);
+    margin: 0;
+}
+.ns-h-dual span { color: var(--red); }
+.ns-h-dual { color: var(--charcoal); }
+
+.ns-wave-card {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 10px 32px;
+}
+.ns-wave-col { text-align: center; padding: 0 18px; }
+.ns-wave-col img {
+    width: 58%;
+    max-width: 290px;
+    margin: 8px auto 8px;
+    display: block;
+    border: 0;
+}
+.ns-wave-col h3 {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.ns-wave-col p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.ns-wave-rule { width: 1px; background: #e0e0e0; margin: 8px 0 16px; align-self: stretch; }
+
+/* 3-in-1 */
+.ns-therapy-shell {
+    background:
+        radial-gradient(ellipse 100% 150% at 100% -12%, rgba(255, 70, 55, 0.82) 0%, rgba(255, 130, 105, 0.55) 24%, rgba(255, 185, 165, 0.28) 46%, transparent 68%),
+        radial-gradient(ellipse 80% 100% at 96% 112%, rgba(255, 95, 75, 0.58) 0%, rgba(255, 170, 150, 0.22) 40%, transparent 60%),
+        #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 42px 28px 36px;
+}
+.ns-h-therapy {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.15;
+}
+.ns-h-therapy span { color: var(--red); }
+.ns-h-therapy { color: var(--charcoal); }
+
+.ns-therapy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.ns-therapy article {
+    background: #fff;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 40px 20px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.ns-t-icon {
+    height: 76px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+.ns-therapy h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ns-therapy h3.red { color: var(--red); }
+.ns-therapy h3.navy { color: var(--navy); }
+.ns-therapy p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+    min-height: 68px;
+}
+
+.ns-pills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    margin-top: 28px;
+    min-height: 90px;
+    flex-wrap: wrap;
+}
+.ns-pills span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    padding: 8px 10px 6px;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: 10px;
+}
+.ns-pills span b {
+    font-size: 14px;
+    font-weight: 800;
+}
+.ns-pills.heat .low { background: #fde8d8; color: #ef6c00; }
+.ns-pills.heat .mid { background: #fddde0; color: var(--red); }
+.ns-pills.heat .high { background: #f7c5c8; color: #b50d16; }
+.ns-pills.timer span {
+    background: #eceef3;
+    color: var(--navy);
+    min-width: 64px;
+}
+.ns-pills.timer span b { font-size: 18px; }
+.ns-pills.light {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.ns-pills.light .row { display: flex; gap: 6px; }
+.ns-pills.light span {
+    background: #fdeced;
+    color: var(--red);
+    min-width: 52px;
+    font-size: 15px;
+    padding: 10px 12px;
+}
+
+/* features banner */
+.ns-features {
+    background: #000;
+    border-radius: var(--radius);
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    align-items: stretch;
+    overflow: hidden;
+}
+.ns-feat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+.ns-feat img {
+    height: 210px;
+    width: auto;
+    max-width: 40%;
+    object-fit: cover;
+    object-position: left center;
+    flex-shrink: 0;
+    display: block;
+}
+.ns-feat-txt {
+    color: #fff;
+    flex: 1;
+    min-width: 0;
+    padding-right: 12px;
+}
+.ns-feat-txt h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+.ns-feat-txt p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* coverage */
+.ns-cover {
+    display: grid;
+    grid-template-columns: 0.86fr 1.72fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.ns-cover-main,
+.ns-cover-bag {
+    margin: 0;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+}
+.ns-cover-main img,
+.ns-cover-bag img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ns-cover-main img {
+    object-position: right center;
+}
+.ns-cover-bag img {
+    object-position: center;
+}
+.ns-cover-copy {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    bottom: 28px;
+    right: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+.ns-cover-lead {
+    margin: 0;
+    max-width: 280px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #5a5a5a;
+    background: none;
+}
+.ns-cover-title {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.2;
+}
+.ns-cover-title span { color: var(--red); white-space: nowrap; }
+
+/* wellness */
+.ns-wellness {
+    background:
+        radial-gradient(ellipse 140% 155% at 100% 0%, rgba(255, 192, 172, 0.62) 0%, rgba(255, 210, 192, 0.38) 36%, rgba(255, 228, 216, 0.16) 58%, transparent 78%),
+        #ffffff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 48px 24px 40px;
+}
+.ns-h-well {
+    font-size: clamp(20px, 2.3vw, 28px);
+    margin: 0 0 34px;
+    color: var(--charcoal);
+}
+.ns-h-well span {
+    color: var(--red);
+}
+.ns-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.ns-benefits article {
+    text-align: center;
+    padding: 14px 18px 12px;
+    position: relative;
+}
+.ns-benefits article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18%;
+    bottom: 18%;
+    width: 1px;
+    background: #e0e0e0;
+}
+.ns-benefits img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 16px;
+}
+.ns-benefits h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+.ns-benefits p {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+
+/* what's included */
+.ns-h-included {
+    font-size: clamp(26px, 3vw, 36px);
+    margin: 0 0 26px;
+    color: #707070;
+    font-weight: 600;
+}
+.ns-h-included span {
+    color: var(--red);
+    font-weight: 600;
+}
+.ns-included {
+    display: grid;
+    grid-template-columns: 0.82fr 1.28fr;
+    gap: 20px;
+    align-items: center;
+}
+.ns-included-product img { width: 100%; }
+
+.ns-diagram {
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    padding: 18px 16px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+.ns-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.callout {
+    font-size: 12px;
+    line-height: 1.3;
+}
+.callout strong {
+    display: block;
+    color: var(--red);
+    font-family: var(--font);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+.callout span {
+    display: block;
+    color: #707070;
+    font-size: 11px;
+    margin-top: 2px;
+}
+.ns-diag-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.ns-diag-side img {
+    width: 100%;
+    max-width: 220px;
+    margin: 4px 0;
+}
+.ns-diag-front {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.ns-diag-front-row {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.ns-diag-front img {
+    width: 100%;
+    max-width: 150px;
+    background: #111;
+    border-radius: 18px;
+    padding: 8px;
+}
+
+/* specs */
+.ns-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+.ns-specs,
+.ns-safety {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-width: 0;
+}
+.ns-specs {
+    background: #000;
+    color: #fff;
+    padding: 28px 24px 20px;
+}
+.ns-specs h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 0 12px;
+}
+.ns-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #7a7a7a;
+}
+.ns-specs th,
+.ns-specs td {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+    border: 1px solid #6a6a6a;
+    vertical-align: middle;
+}
+.ns-specs th {
+    width: 42%;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    border-right: 1px solid #c0c0c0;
+}
+.ns-specs td {
+    color: #fff;
+    font-weight: 400;
+}
+
+.ns-safety {
+    background: #c00000;
+    color: #fff;
+    padding: 28px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+}
+.ns-safety-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+.ns-safety-head img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.ns-safety h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.ns-safety ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+}
+.ns-safety li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+.ns-safety li::marker { color: #fff; }
+.ns-disclaimer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.28);
+    flex: 0.72;
+    display: flex;
+    flex-direction: column;
+}
+.ns-disclaimer ul {
+    flex: 1;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .ns-section { padding: 72px 0 48px; }
+    .ns-section-tight { padding-top: 36px; }
+    .ns-section-last { padding-bottom: 72px; }
+    .ns-wave-section { padding-top: 80px; }
+
+    .ns-lifestyle,
+    .ns-therapy,
+    .ns-benefits { grid-template-columns: repeat(2, 1fr); }
+    .ns-features,
+    .ns-cover,
+    .ns-included,
+    .ns-spec-grid { grid-template-columns: 1fr; }
+    .ns-wave-card { grid-template-columns: 1fr; padding: 20px 16px 24px; }
+    .ns-wave-rule {
+        width: auto;
+        height: 1px;
+        margin: 20px 24px;
+        align-self: auto;
+    }
+    .ns-wave-col img { width: 70%; max-width: 260px; }
+
+    .ns-therapy p { min-height: 0; }
+
+    .ns-features { padding: 0; gap: 0; }
+    .ns-feat { gap: 8px; }
+    .ns-feat img,
+    .ns-feat:first-child img {
+        width: auto;
+        max-width: 38%;
+        height: 140px;
+    }
+
+    .ns-cover-main,
+    .ns-cover-bag { min-height: 0; }
+    .ns-cover-main img,
+    .ns-cover-bag img {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    .ns-cover-copy {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        padding: 18px 20px 22px;
+        text-align: left;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+    .ns-cover-lead { max-width: none; }
+    .ns-cover-title span { white-space: normal; }
+
+    .ns-benefits article:nth-child(2)::after { display: none; }
+    .ns-safety { justify-content: flex-start; }
+    .ns-safety ul,
+    .ns-disclaimer { flex: none; }
+}
+
+@media (max-width: 700px) {
+    .ns-section { padding: 48px 0 36px; }
+    .ns-section-tight { padding-top: 24px; }
+    .ns-section-last { padding-bottom: 56px; }
+    .ns-container { padding: 0 16px; }
+    .ns-wave-section { padding-top: 56px; }
+
+    .ns-h-right,
+    .ns-h-left,
+    .ns-h-center:not(.ns-h-dual):not(.ns-h-well),
+    .ns-h-dual,
+    .ns-h-included {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+    .ns-h-therapy { font-size: 20px; margin-bottom: 20px; }
+    .ns-h-well { font-size: 18px; margin-bottom: 22px; }
+    .ns-lead { font-size: 14px; margin: 12px auto 24px; }
+
+    .ns-lifestyle { gap: 14px; }
+    .ns-life-icon { width: 40px; height: 40px; top: -4px; left: -4px; }
+    .ns-lifestyle h3 { font-size: 12px; }
+
+    .ns-therapy { grid-template-columns: 1fr; }
+    .ns-therapy-shell { padding: 22px 14px 18px; }
+    .ns-therapy article { padding: 24px 16px 20px; }
+    .ns-pills {
+        margin-top: 16px;
+        min-height: 0;
+    }
+    .ns-pills span { min-width: 70px; }
+
+    .ns-features {
+        padding: 0;
+        border-radius: 18px;
+        gap: 0;
+    }
+    .ns-feat { gap: 8px; }
+    .ns-feat-txt { padding-right: 10px; }
+    .ns-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
+    .ns-feat-txt p { font-size: 12px; }
+    .ns-feat img,
+    .ns-feat:first-child img {
+        width: auto;
+        max-width: 40%;
+        height: 96px;
+    }
+
+    .ns-cover-main img,
+    .ns-cover-bag img { height: 220px; }
+    .ns-cover-copy { padding: 16px 16px 18px; }
+    .ns-cover-lead { font-size: 14px; }
+    .ns-cover-title { font-size: 20px; }
+
+    .ns-wellness { padding: 28px 14px 22px; }
+    .ns-benefits { gap: 8px 0; }
+    .ns-benefits article { padding: 12px 10px; }
+    .ns-benefits article::after { display: none; }
+    .ns-benefits img { width: 56px; height: 56px; margin-bottom: 10px; }
+    .ns-benefits h3 { font-size: 13px; }
+    .ns-benefits p { font-size: 12px; }
+
+    .ns-specs,
+    .ns-safety { padding: 20px 16px 16px; border-radius: 16px; }
+    .ns-specs h3,
+    .ns-safety h3 { font-size: 16px; }
+    .ns-specs th,
+    .ns-specs td {
+        padding: 8px 10px;
+        font-size: 12px;
+        word-break: break-word;
+    }
+    .ns-safety li { font-size: 13px; line-height: 1.45; }
+
+    .ns-diag-front-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .ns-h-right { text-align: left; }
+    .ns-cover-copy { text-align: left; }
+    .ns-cover-lead { margin-left: 0; }
+}
