@@ -130,8 +130,9 @@ h2, h3 { font-family: var(--font); }
 .ankle-h-dual { color: var(--charcoal); }
 
 .ankle-wave-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -139,7 +140,11 @@ h2, h3 { font-family: var(--font); }
     min-width: 0;
     width: 100%;
 }
+.ankle-wave-rule { display: none !important; }
 .ankle-wave-col {
+    flex: 1 1 0;
+    width: 50%;
+    max-width: 50%;
     text-align: center;
     padding: 0 28px;
     min-width: 0;
@@ -641,7 +646,12 @@ h2, h3 { font-family: var(--font); }
     .ankle-cover,
     .ankle-included,
     .ankle-spec-grid { grid-template-columns: 1fr; }
-    .ankle-wave-card { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 24px; }
+    .ankle-wave-card { flex-wrap: wrap; padding: 20px 16px 24px; }
+    .ankle-wave-col {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
     .ankle-wave-col + .ankle-wave-col {
         border-left: 0;
         border-top: 1px solid #e0e0e0;
