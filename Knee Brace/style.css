@@ -1,5 +1,3 @@
-*, *::before, *::after { box-sizing: border-box; }
-
 :root {
     --red: #e31e24;
     --red-deep: #c10000;
@@ -17,23 +15,33 @@
     --body: 'Poppins', sans-serif;
 }
 
-html, body {
+.knee-page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin: 0;
     padding: 0;
-    width: 100%;
     background: #fff;
     color: var(--charcoal);
     font-family: var(--body);
     overflow-x: hidden;
+    box-sizing: border-box;
+    container-type: inline-size;
+    container-name: knee;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
-img { display: block; max-width: 100%; height: auto; }
-h2, h3, p { margin: 0; }
-h2, h3 { font-family: var(--font); }
+.knee-page *,
+.knee-page *::before,
+.knee-page *::after { box-sizing: border-box; }
 
-.knee-page { width: 100%; background: #fff; }
+.knee-page img { display: block; max-width: 100%; height: auto; }
+.knee-page h2,
+.knee-page h3,
+.knee-page p { margin: 0; }
+.knee-page h2,
+.knee-page h3 { font-family: var(--font); }
 
 .knee-container {
     width: 100%;
@@ -626,11 +634,13 @@ h2, h3 { font-family: var(--font); }
     justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@container knee (max-width: 1024px) {
     .knee-section { padding: 72px 0 48px; }
     .knee-section-tight { padding-top: 36px; }
     .knee-section-last { padding-bottom: 72px; }
     .knee-wave-section { padding-top: 80px; }
+
+    .knee-h-right { text-align: left; }
 
     .knee-lifestyle,
     .knee-therapy,
@@ -689,7 +699,7 @@ h2, h3 { font-family: var(--font); }
     .knee-disclaimer { flex: none; }
 }
 
-@media (max-width: 700px) {
+@container knee (max-width: 700px) {
     .knee-section { padding: 48px 0 36px; }
     .knee-section-tight { padding-top: 24px; }
     .knee-section-last { padding-bottom: 56px; }
@@ -766,7 +776,7 @@ h2, h3 { font-family: var(--font); }
     .knee-diag-front-row { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 480px) {
+@container knee (max-width: 480px) {
     .knee-h-right { text-align: left; }
     .knee-cover-copy { text-align: left; }
     .knee-cover-lead { margin-left: 0; }
