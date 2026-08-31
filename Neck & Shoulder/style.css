@@ -326,8 +326,8 @@
 }
 .ns-feat {
     display: flex;
-    align-items: stretch;
-    gap: 14px;
+    align-items: center;
+    gap: 12px;
     flex: 1 1 0;
     min-width: 0;
     min-height: 240px;
@@ -338,14 +338,15 @@
 .ns-features .ns-feat img,
 .ns-page .ns-feat img,
 .ns-page .ns-feat:first-child img {
-    width: auto !important;
-    max-width: none !important;
-    height: 240px !important;
+    width: 38% !important;
+    max-width: 38% !important;
+    height: auto !important;
     max-height: 240px !important;
+    aspect-ratio: 1 / 1;
     object-fit: contain !important;
-    object-position: left center !important;
+    object-position: center center !important;
     flex-shrink: 0 !important;
-    align-self: stretch;
+    align-self: center;
     display: block !important;
 }
 
@@ -363,7 +364,7 @@
     line-height: 1.25;
     margin: 0 0 8px;
     color: #fff !important;
-    white-space: nowrap;
+    white-space: normal;
     overflow-wrap: normal;
     word-break: normal;
     hyphens: none;
