@@ -326,7 +326,7 @@
 .wpl-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 0;
+    padding: 12px 20px 12px 0;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -337,16 +337,16 @@
 .wpl-feat {
     display: flex;
     align-items: center;
-    gap: 8px;
-    flex: 0 1 auto;
+    gap: 14px;
+    flex: 1 1 0;
     min-width: 0;
 }
 .wpl-page .wpl-feat img,
 .wpl-page .wpl-feat:first-child img {
-    width: 220px !important;
-    height: 220px !important;
-    max-width: 220px;
-    max-height: 220px;
+    width: 148px !important;
+    height: 148px !important;
+    max-width: 148px;
+    max-height: 148px;
     object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
@@ -356,20 +356,24 @@
 
 .wpl-feat-txt {
     color: #fff;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     min-width: 0;
     padding-right: 12px;
 }
 .wpl-feat-txt h3 {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.25;
     margin: 0 0 12px;
     color: #fff !important;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 .wpl-feat-txt p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #fff !important;
     line-height: 1.4;
