@@ -40,11 +40,11 @@
 .belt-page .belt-feat > img,
 .belt-features .belt-feat > img {
     width: auto !important;
-    max-width: 40% !important;
+    max-width: none !important;
     height: 240px !important;
     max-height: 240px !important;
     object-fit: contain !important;
-    object-position: center center !important;
+    object-position: left center !important;
 }
 .belt-page h2,
 .belt-page h3,
@@ -332,6 +332,7 @@
     background: #000;
     border-radius: var(--radius);
     padding: 0 !important;
+    min-height: 240px;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -346,19 +347,21 @@
     flex: 1 1 0;
     min-width: 0;
     min-height: 240px;
+    height: 240px;
+    padding: 0 !important;
 }
 .belt-feat img,
 .belt-features .belt-feat img,
 .belt-page .belt-feat img,
 .belt-page .belt-feat:first-child img {
     width: auto !important;
-    max-width: 40% !important;
+    max-width: none !important;
     height: 240px !important;
     max-height: 240px !important;
     object-fit: contain !important;
-    object-position: center center !important;
+    object-position: left center !important;
     flex-shrink: 0 !important;
-    align-self: center;
+    align-self: stretch;
     display: block !important;
 }
 
@@ -735,17 +738,17 @@
         gap: 0;
         min-height: 0;
     }
-    .belt-feat { gap: 10px; padding: 0; min-height: 240px; }
+    .belt-feat { gap: 10px; padding: 0 !important; min-height: 240px; height: 240px; }
     .belt-feat img,
     .belt-features .belt-feat > img,
     .belt-page .belt-feat img,
     .belt-page .belt-feat:first-child img {
         width: auto !important;
-        max-width: 40% !important;
+        max-width: none !important;
         height: 240px !important;
         max-height: 240px !important;
         object-fit: contain !important;
-        object-position: center center !important;
+        object-position: left center !important;
     }
 
     .belt-cover-main,
