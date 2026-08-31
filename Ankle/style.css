@@ -338,6 +338,8 @@
     flex-shrink: 0 !important;
     align-self: center;
     display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 
