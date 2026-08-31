@@ -328,30 +328,32 @@
 .wpl-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 0;
+    padding: 0 !important;
     display: flex;
     justify-content: space-between;
     gap: 0;
-    align-items: center;
+    align-items: stretch;
     overflow: hidden;
     color: #fff;
 }
 .wpl-feat {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 14px;
     flex: 1 1 0;
     min-width: 0;
+    min-height: 240px;
 }
 .wpl-page .wpl-feat img,
 .wpl-page .wpl-feat:first-child img {
-    width: auto !important;
-    height: 200px !important;
-    max-width: 46%;
-    max-height: 200px;
-    object-fit: contain !important;
+    width: 34% !important;
+    max-width: 34%;
+    height: 240px !important;
+    max-height: 240px;
+    object-fit: cover !important;
     object-position: center;
     flex-shrink: 0;
+    align-self: stretch;
     display: block;
 }
 
@@ -360,10 +362,11 @@
     color: #fff;
     flex: 1 1 auto;
     min-width: 0;
+    align-self: center;
     padding-right: 12px;
 }
 .wpl-feat-txt h3 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.25;
@@ -375,7 +378,7 @@
     hyphens: none;
 }
 .wpl-feat-txt p {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     color: #fff !important;
     line-height: 1.4;
