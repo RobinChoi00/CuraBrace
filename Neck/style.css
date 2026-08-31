@@ -11,7 +11,7 @@
     --radius-sm: 16px;
     --max: 1180px;
     --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-    --font: 'Montserrat', sans-serif;
+    --font: 'Poppins', sans-serif;
     --body: 'Poppins', sans-serif;
 }
 
@@ -40,8 +40,15 @@
 .neck-page h2,
 .neck-page h3,
 .neck-page p { margin: 0; }
+.neck-page h1,
 .neck-page h2,
-.neck-page h3 { font-family: var(--body); }
+.neck-page h3,
+.neck-page h4,
+.neck-page h5,
+.neck-page h6 {
+    font-family: var(--body) !important;
+    line-height: 1.3 !important;
+}
 
 .neck-container {
     width: 100%;

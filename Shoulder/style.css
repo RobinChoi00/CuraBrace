@@ -11,7 +11,7 @@
     --radius-sm: 16px;
     --max: 1180px;
     --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-    --font: 'Montserrat', sans-serif;
+    --font: 'Poppins', sans-serif;
     --body: 'Poppins', sans-serif;
 }
 
@@ -40,8 +40,15 @@
 .shoulder-page h2,
 .shoulder-page h3,
 .shoulder-page p { margin: 0; }
+.shoulder-page h1,
 .shoulder-page h2,
-.shoulder-page h3 { font-family: var(--body); }
+.shoulder-page h3,
+.shoulder-page h4,
+.shoulder-page h5,
+.shoulder-page h6 {
+    font-family: var(--body) !important;
+    line-height: 1.3 !important;
+}
 
 .shoulder-container {
     width: 100%;
