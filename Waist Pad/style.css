@@ -314,7 +314,6 @@
     background: #000;
     border-radius: 32px;
     padding: 0 !important;
-    min-height: 240px;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -324,23 +323,20 @@
 }
 .waist-feat {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: stretch;
+    gap: 14px;
     flex: 1 1 0;
     min-width: 0;
     min-height: 240px;
-    height: 240px;
-    padding: 0 !important;
 }
 .waist-feat img,
 .waist-features .waist-feat img,
 .waist-page .waist-feat img,
 .waist-page .waist-feat:first-child img {
-    width: 38% !important;
-    max-width: 38% !important;
-    height: auto !important;
+    width: auto !important;
+    max-width: 40% !important;
+    height: 240px !important;
     max-height: 240px !important;
-    aspect-ratio: 1 / 1;
     object-fit: contain !important;
     object-position: center center !important;
     flex-shrink: 0 !important;
@@ -363,7 +359,7 @@
     line-height: 1.25;
     margin: 0 0 8px;
     color: #fff !important;
-    white-space: normal;
+    white-space: nowrap;
     overflow-wrap: normal;
     word-break: normal;
     hyphens: none;
