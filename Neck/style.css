@@ -352,15 +352,13 @@
     display: block !important;
 }
 
-.neck-feat:nth-child(2) img {
-    object-position: center;
-}
+
 .neck-feat-txt {
     color: #fff;
     flex: 1 1 auto;
     min-width: 0;
     align-self: center;
-    padding-right: 18px;
+    padding-right: 12px;
 }
 .neck-feat-txt h3 {
     font-size: 16px;

@@ -37,16 +37,6 @@
 .belt-page *::after { box-sizing: border-box; }
 
 .belt-page img { display: block; max-width: 100%; height: auto; }
-.belt-page .belt-feat > img,
-.belt-features .belt-feat > img {
-    width: 38% !important;
-    max-width: 38% !important;
-    height: auto !important;
-    max-height: 240px !important;
-    aspect-ratio: 1 / 1;
-    object-fit: contain !important;
-    object-position: center center !important;
-}
 .belt-page h2,
 .belt-page h3,
 .belt-page p { margin: 0; }
@@ -333,7 +323,6 @@
     background: #000;
     border-radius: var(--radius);
     padding: 0 !important;
-    min-height: 240px;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -343,23 +332,20 @@
 }
 .belt-feat {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: stretch;
+    gap: 14px;
     flex: 1 1 0;
     min-width: 0;
     min-height: 240px;
-    height: 240px;
-    padding: 0 !important;
 }
 .belt-feat img,
 .belt-features .belt-feat img,
 .belt-page .belt-feat img,
 .belt-page .belt-feat:first-child img {
-    width: 38% !important;
-    max-width: 38% !important;
-    height: auto !important;
+    width: auto !important;
+    max-width: 40% !important;
+    height: 240px !important;
     max-height: 240px !important;
-    aspect-ratio: 1 / 1;
     object-fit: contain !important;
     object-position: center center !important;
     flex-shrink: 0 !important;
@@ -382,7 +368,7 @@
     line-height: 1.25;
     margin: 0 0 8px;
     color: #fff !important;
-    white-space: normal;
+    white-space: nowrap;
     overflow-wrap: normal;
     word-break: normal;
     hyphens: none;
@@ -734,24 +720,21 @@
 
     .belt-features {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: stretch;
-        padding: 0 !important;
-        gap: 0;
+        padding: 8px 14px;
+        gap: 8px;
         min-height: 0;
     }
-    .belt-feat { gap: 10px; padding: 0 !important; min-height: 240px; height: 240px; }
+    .belt-feat { gap: 10px; padding: 0; }
     .belt-feat img,
-    .belt-features .belt-feat > img,
     .belt-page .belt-feat img,
     .belt-page .belt-feat:first-child img {
-        width: 38% !important;
-        max-width: 38% !important;
-        height: auto !important;
-        max-height: 240px !important;
-        aspect-ratio: 1 / 1;
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px !important;
+        max-height: 72px !important;
         object-fit: contain !important;
-        object-position: center center !important;
     }
 
     .belt-cover-main,

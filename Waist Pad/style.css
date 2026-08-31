@@ -312,7 +312,7 @@
 /* features banner */
 .waist-features {
     background: #000;
-    border-radius: 32px;
+    border-radius: var(--radius);
     padding: 0 !important;
     display: flex;
     justify-content: space-between;
@@ -350,7 +350,7 @@
     flex: 1 1 auto;
     min-width: 0;
     align-self: center;
-    padding-right: 8px;
+    padding-right: 12px;
 }
 .waist-feat-txt h3 {
     font-size: 16px;
