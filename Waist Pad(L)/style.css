@@ -96,7 +96,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.wpl-lifestyle article { padding-top: 10px; }
+.wpl-lifestyle article { padding-top: 10px; text-align: center; }
 .wpl-lifestyle h3 {
     color: var(--red);
     font-size: 14px;
@@ -104,11 +104,13 @@
     margin: 14px 0 6px;
     letter-spacing: 0.02em;
     line-height: 1.15;
+    text-align: center;
 }
 .wpl-lifestyle p {
     color: var(--muted);
     font-size: 13px;
     line-height: 1.5;
+    text-align: center;
 }
 .wpl-life-media { position: relative; }
 .wpl-life-media img:not(.wpl-life-icon) {
@@ -272,24 +274,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 78px;
-    padding: 8px 10px 6px;
+    min-width: 96px;
+    padding: 12px 16px 10px;
     border-radius: 8px;
     font-family: var(--font);
     font-weight: 800;
     line-height: 1.1;
-    font-size: 10px;
+    font-size: 12px;
 }
 .wpl-pills span b {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
 }
 .wpl-pills.pulse span {
     background: #eceef3;
     color: var(--navy);
-    min-width: 72px;
-    font-size: 15px;
-    padding: 10px 14px;
+    min-width: 90px;
+    font-size: 18px;
+    padding: 14px 18px;
 }
 .wpl-pills.light {
     flex-direction: column;
@@ -300,9 +302,9 @@
 .wpl-pills.light span {
     background: #fdeced;
     color: var(--red);
-    min-width: 52px;
-    font-size: 15px;
-    padding: 10px 12px;
+    min-width: 68px;
+    font-size: 18px;
+    padding: 14px 16px;
 }
 .wpl-pills.timer {
     flex-direction: column;
@@ -313,21 +315,20 @@
 .wpl-pills.timer span {
     background: #eceef3;
     color: var(--navy);
-    min-width: 42px;
-    padding: 6px 5px 4px;
-    font-size: 8px;
-    border-radius: 7px;
+    min-width: 54px;
+    padding: 10px 8px 8px;
+    font-size: 11px;
+    border-radius: 8px;
 }
 .wpl-pills.timer span b {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 /* features banner */
 .wpl-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 40px 28px;
-    min-height: 280px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -344,10 +345,10 @@
 }
 .wpl-page .wpl-feat img,
 .wpl-page .wpl-feat:first-child img {
-    width: 148px !important;
-    height: 148px !important;
-    max-width: 148px;
-    max-height: 148px;
+    width: auto !important;
+    height: 200px !important;
+    max-width: 46%;
+    max-height: 200px;
     object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
@@ -362,11 +363,11 @@
     padding-right: 12px;
 }
 .wpl-feat-txt h3 {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.25;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     color: #fff !important;
     white-space: nowrap;
     overflow-wrap: normal;
@@ -374,7 +375,7 @@
     hyphens: none;
 }
 .wpl-feat-txt p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: #fff !important;
     line-height: 1.4;

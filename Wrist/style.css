@@ -96,7 +96,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.wrist-lifestyle article { padding-top: 10px; }
+.wrist-lifestyle article { padding-top: 10px; text-align: center; }
 .wrist-lifestyle h3 {
     color: var(--red);
     font-size: 14px;
@@ -104,11 +104,13 @@
     margin: 14px 0 6px;
     letter-spacing: 0.02em;
     line-height: 1.15;
+    text-align: center;
 }
 .wrist-lifestyle p {
     color: var(--muted);
     font-size: 13px;
     line-height: 1.5;
+    text-align: center;
 }
 .wrist-life-media { position: relative; }
 .wrist-life-media img:not(.wrist-life-icon) {
@@ -283,31 +285,31 @@
     gap: 6px;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 220px;
+    max-width: 280px;
 }
 .wrist-pills span {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    min-width: 48px;
-    height: 40px;
+    width: 76px;
+    min-width: 76px;
+    height: 60px;
     padding: 0;
     border-radius: 8px;
     font-family: var(--font);
     font-weight: 800;
     line-height: 1;
-    font-size: 14px;
+    font-size: 18px;
 }
 .wrist-pills span b {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 800;
 }
 .wrist-pills.heat .low { background: #fde8d8; color: #ef6c00; }
 .wrist-pills.heat .mid { background: #fddde0; color: var(--red); }
 .wrist-pills.heat .high { background: #f7c5c8; color: #b50d16; }
-.wrist-pills.massage { max-width: 168px; }
+.wrist-pills.massage { max-width: 260px; }
 .wrist-pills.massage span {
     background: #eceef3;
     color: var(--navy);
@@ -315,11 +317,11 @@
 .wrist-pills.timer span {
     background: #eceef3;
     color: var(--navy);
-    width: 88px;
-    min-width: 88px;
-    height: 44px;
+    width: 128px;
+    min-width: 128px;
+    height: 64px;
 }
-.wrist-pills.timer span b { font-size: 16px; }
+.wrist-pills.timer span b { font-size: 22px; }
 .wrist-battery {
     width: 100%;
     max-width: 220px;
@@ -347,8 +349,7 @@
 .wrist-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 40px 28px;
-    min-height: 280px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     gap: 0;
@@ -365,10 +366,10 @@
 }
 .wrist-page .wrist-feat img,
 .wrist-page .wrist-feat:first-child img {
-    width: 148px !important;
-    height: 148px !important;
-    max-width: 148px;
-    max-height: 148px;
+    width: auto !important;
+    height: 200px !important;
+    max-width: 46%;
+    max-height: 200px;
     object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
@@ -383,11 +384,11 @@
     padding-right: 12px;
 }
 .wrist-feat-txt h3 {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.25;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     color: #fff !important;
     white-space: nowrap;
     overflow-wrap: normal;
@@ -395,7 +396,7 @@
     hyphens: none;
 }
 .wrist-feat-txt p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: #fff !important;
     line-height: 1.4;

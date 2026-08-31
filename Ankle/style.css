@@ -96,7 +96,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.ankle-lifestyle article { padding-top: 10px; }
+.ankle-lifestyle article { padding-top: 10px; text-align: center; }
 .ankle-lifestyle h3 {
     color: var(--red);
     font-size: 14px;
@@ -104,11 +104,13 @@
     margin: 14px 0 6px;
     letter-spacing: 0.02em;
     line-height: 1.15;
+    text-align: center;
 }
 .ankle-lifestyle p {
     color: var(--muted);
     font-size: 13px;
     line-height: 1.5;
+    text-align: center;
 }
 .ankle-life-media { position: relative; }
 .ankle-life-media img:not(.ankle-life-icon) {
@@ -268,16 +270,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 78px;
-    padding: 8px 10px 6px;
+    min-width: 96px;
+    padding: 12px 16px 10px;
     border-radius: 8px;
     font-family: var(--font);
     font-weight: 800;
     line-height: 1.1;
-    font-size: 10px;
+    font-size: 12px;
 }
 .ankle-pills span b {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
 }
 .ankle-pills.heat .low { background: #fde8d8; color: #ef6c00; }
@@ -286,9 +288,9 @@
 .ankle-pills.timer span {
     background: #eceef3;
     color: var(--navy);
-    min-width: 64px;
+    min-width: 84px;
 }
-.ankle-pills.timer span b { font-size: 18px; }
+.ankle-pills.timer span b { font-size: 22px; }
 .ankle-pills.light {
     flex-direction: column;
     align-items: center;
@@ -298,17 +300,16 @@
 .ankle-pills.light span {
     background: #fdeced;
     color: var(--red);
-    min-width: 52px;
-    font-size: 15px;
-    padding: 10px 12px;
+    min-width: 68px;
+    font-size: 18px;
+    padding: 14px 16px;
 }
 
 /* features banner */
 .ankle-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 40px 28px;
-    min-height: 280px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     gap: 4px 8px;
@@ -325,10 +326,10 @@
 }
 .ankle-page .ankle-feat img,
 .ankle-page .ankle-feat:first-child img {
-    width: 148px !important;
-    height: 148px !important;
-    max-width: 148px;
-    max-height: 148px;
+    width: auto !important;
+    height: 200px !important;
+    max-width: 46%;
+    max-height: 200px;
     object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
@@ -343,11 +344,11 @@
     padding-right: 6px;
 }
 .ankle-feat-txt h3 {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.25;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     color: #fff !important;
     white-space: nowrap;
     overflow-wrap: normal;
@@ -355,7 +356,7 @@
     hyphens: none;
 }
 .ankle-feat-txt p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: #fff !important;
     line-height: 1.4;
