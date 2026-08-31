@@ -325,11 +325,12 @@
 .pad-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 12px 20px 12px 0;
+    padding: 40px 28px;
+    min-height: 280px;
     display: flex;
     justify-content: space-between;
     gap: 0;
-    align-items: stretch;
+    align-items: center;
     overflow: hidden;
     color: #fff;
 }
@@ -753,6 +754,7 @@
         align-items: stretch;
         padding: 8px 14px;
         gap: 8px;
+        min-height: 0;
     }
     .pad-feat { gap: 10px; padding: 0; }
     .pad-page .pad-feat img,

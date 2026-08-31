@@ -307,7 +307,8 @@
 .ankle-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 12px 20px 12px 0;
+    padding: 40px 28px;
+    min-height: 280px;
     display: flex;
     justify-content: space-between;
     gap: 4px 8px;
@@ -705,6 +706,7 @@
         align-items: stretch;
         padding: 8px 14px;
         gap: 8px;
+        min-height: 0;
     }
     .ankle-feat { gap: 10px; padding: 0; }
     .ankle-page .ankle-feat img,
