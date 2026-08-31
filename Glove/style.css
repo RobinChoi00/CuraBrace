@@ -324,17 +324,19 @@
     min-width: 0;
     min-height: 240px;
 }
+.glove-feat img,
+.glove-features .glove-feat img,
 .glove-page .glove-feat img,
 .glove-page .glove-feat:first-child img {
     width: auto !important;
-    max-width: 40%;
+    max-width: 40% !important;
     height: 240px !important;
-    max-height: 240px;
+    max-height: 240px !important;
     object-fit: contain !important;
-    object-position: left center;
-    flex-shrink: 0;
-    align-self: stretch;
-    display: block;
+    object-position: center center !important;
+    flex-shrink: 0 !important;
+    align-self: center;
+    display: block !important;
 }
 
 
@@ -711,12 +713,13 @@
         min-height: 0;
     }
     .glove-feat { gap: 10px; padding: 0; }
+    .glove-feat img,
     .glove-page .glove-feat img,
     .glove-page .glove-feat:first-child img {
         width: 72px !important;
         height: 72px !important;
-        max-width: 72px;
-        max-height: 72px;
+        max-width: 72px !important;
+        max-height: 72px !important;
         object-fit: contain !important;
     }
 
@@ -787,12 +790,13 @@
     .glove-feat-txt { padding-right: 0; }
     .glove-feat-txt h3 { font-size: 13px; margin: 0 0 4px; }
     .glove-feat-txt p { font-size: 12px; }
+    .glove-feat img,
     .glove-page .glove-feat img,
     .glove-page .glove-feat:first-child img {
         width: 72px !important;
         height: 72px !important;
-        max-width: 72px;
-        max-height: 72px;
+        max-width: 72px !important;
+        max-height: 72px !important;
         object-fit: contain !important;
     }
 
