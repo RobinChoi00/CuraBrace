@@ -340,12 +340,12 @@
 }
 .belt-page .belt-feat img,
 .belt-page .belt-feat:first-child img {
-    width: 34% !important;
-    max-width: 34%;
+    width: auto !important;
+    max-width: 40%;
     height: 240px !important;
     max-height: 240px;
-    object-fit: cover !important;
-    object-position: center;
+    object-fit: contain !important;
+    object-position: left center;
     flex-shrink: 0;
     align-self: stretch;
     display: block;
