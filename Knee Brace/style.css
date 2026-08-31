@@ -313,7 +313,7 @@
 .knee-features {
     background: #000;
     border-radius: var(--radius);
-    padding: 36px 20px 36px 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -334,10 +334,10 @@
 }
 .knee-page .knee-feat img,
 .knee-page .knee-feat:first-child img {
-    width: 152px !important;
-    height: 152px !important;
-    max-width: 152px;
-    max-height: 152px;
+    width: 220px !important;
+    height: 220px !important;
+    max-width: 220px;
+    max-height: 220px;
     object-fit: contain !important;
     object-position: center;
     flex-shrink: 0;
@@ -352,7 +352,7 @@
     padding-right: 0;
 }
 .knee-feat-txt h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.25;
@@ -360,7 +360,7 @@
     color: #fff !important;
 }
 .knee-feat-txt p {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: #fff !important;
     line-height: 1.4;
